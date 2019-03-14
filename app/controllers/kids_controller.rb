@@ -16,7 +16,7 @@ class KidsController < ApplicationController
     @kid = Kid.new(kid_params)
     if @kid.save
       flash[:notice] = "You added #{@kid.name} profile successfully."
-      redirect_to root_path
+      redirect_to kid_path(@kid)
     else
       render :new
     end
