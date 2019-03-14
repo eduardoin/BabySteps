@@ -8,8 +8,8 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.2'
 gem 'redis'
-gem 'dotenv-rails', groups: [:development, :test]
-
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'sassc-rails'
