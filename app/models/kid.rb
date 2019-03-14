@@ -4,7 +4,7 @@ class Kid < ApplicationRecord
   has_many :episodes, dependent: :destroy
   has_many :measurements, dependent: :destroy
 
-  mount_uploader :photo, PhotoUploader
+  mount_uploader :picture, PhotoUploader
 
   has_many :tutelages, dependent: :destroy
   has_many :users, through: :tutelages
