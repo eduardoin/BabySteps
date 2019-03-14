@@ -10,10 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_13_183116) do
+ActiveRecord::Schema.define(version: 2019_03_14_171111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "episodes", force: :cascade do |t|
+    t.string "type"
+    t.jsonb "data", default: {}
+    t.datetime "tracked_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "kid_id"
+    t.index ["kid_id"], name: "index_episodes_on_kid_id"
+  end
+
+  create_table "kids", force: :cascade do |t|
+    t.string "name"
+    t.string "gender"
+    t.datetime "born_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "measurements", force: :cascade do |t|
+    t.string "type"
+    t.float "value"
+    t.datetime "measured_at"
+    t.bigint "kid_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kid_id"], name: "index_measurements_on_kid_id"
+  end
+
+  create_table "tutelages", force: :cascade do |t|
+    t.bigint "kid_id"
+    t.bigint "user_id"
+    t.boolean "admin", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kid_id"], name: "index_tutelages_on_kid_id"
+    t.index ["user_id"], name: "index_tutelages_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +61,14 @@ ActiveRecord::Schema.define(version: 2019_03_13_183116) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username", default: "", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "episodes", "kids"
+  add_foreign_key "measurements", "kids"
+  add_foreign_key "tutelages", "kids"
+  add_foreign_key "tutelages", "users"
 end
