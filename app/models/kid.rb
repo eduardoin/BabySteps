@@ -3,6 +3,9 @@ class Kid < ApplicationRecord
 
   has_many :episodes, dependent: :destroy
   has_many :measurements, dependent: :destroy
+
+  mount_uploader :picture, PhotoUploader
+
   has_many :tutelages, dependent: :destroy
   has_many :users, through: :tutelages
 
@@ -16,4 +19,5 @@ class Kid < ApplicationRecord
   def set_admin_on_create
     tutelages.first.update(admin: true)
   end
+
 end
