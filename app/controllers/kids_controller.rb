@@ -2,7 +2,7 @@ class KidsController < ApplicationController
   before_action :set_kid, only: %i[show edit update destroy]
 
   def index
-    @kids = Kid.all
+    @kids = current_user.kids
   end
 
   def show
@@ -14,6 +14,7 @@ class KidsController < ApplicationController
 
   def create
     @kid = Kid.new(kid_params)
+    @kid.users << current_user
     if @kid.save
       flash[:notice] = "You added #{@kid.name} profile successfully."
       redirect_to kid_path(@kid)
@@ -43,7 +44,7 @@ class KidsController < ApplicationController
   private
 
   def kid_params
-    params.require(:kid).permit(:name, :gender, :born_at)
+    params.require(:kid).permit(:name, :gender, :born_at, :photo)
   end
 
   def set_kid
