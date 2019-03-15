@@ -1,5 +1,5 @@
 class KidsController < ApplicationController
-  before_action :set_kid, only: %i[show edit update destroy tracking]
+  before_action :set_kid, only: %i[show edit update destroy tracking full_log]
 
   def index
     @kids = current_user.kids
@@ -42,6 +42,10 @@ class KidsController < ApplicationController
   end
 
   def tracking
+  end
+
+  def full_log
+    @episodes = @kid.episodes
   end
 
   private
