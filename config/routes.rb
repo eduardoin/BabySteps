@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :kids do
     member do
-      get 'tracks'
+      get 'tracking'
+      get 'full_log'
+      get 'chart'
+      get 'share'
     end
     resources :episodes, only: [:new, :create]
   end
