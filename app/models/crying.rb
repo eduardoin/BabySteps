@@ -1,4 +1,6 @@
 class Crying < Episode
-  episode_attr :level, :note
-  validates :level, presence: true, inclusion: { in: ['Whimpering/Whining', 'Continuous Crying', 'Hysterical Crying'] }
+  LEVELS = ['Whimpering/Whining', 'Continuous Crying', 'Hysterical Crying']
+
+  episode_attr :level
+  validates :level, presence: true, inclusion: { in: LEVELS }
 end

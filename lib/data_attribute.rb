@@ -1,5 +1,7 @@
 module DataAttribute
   def episode_attr(*attrs)
+    @permitted_params = attrs
+
     attrs.each do |attribute|
       define_method(attribute) do
         instance_variable_get("@#{attribute}")
