@@ -1,5 +1,5 @@
 class KidsController < ApplicationController
-  before_action :set_kid, only: %i[show edit update destroy]
+  before_action :set_kid, only: %i[show edit update destroy tracking]
 
   def index
     @kids = current_user.kids
@@ -39,6 +39,9 @@ class KidsController < ApplicationController
     @kid.destroy
     flash[:notice] = "You deleted #{@kid.name} profile successfully."
     redirect_to kids_path
+  end
+
+  def tracking
   end
 
   private
