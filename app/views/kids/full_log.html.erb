@@ -1,0 +1,28 @@
+<div class="container">
+  <% @episodes.each do |episode| %>
+
+    <div class="row">
+      <h4><%= episode.type %></h4>
+    </div>
+    <div class="row">
+      <h5><%= episode.tracked_at %></h5>
+    </div>
+
+    <% if episode.type == "DiaperChanging" %>
+      <% episode.data.each do |key, value| %>
+        <% if value == "1" %>
+          <div class="row">
+            <p><strong><%= "#{key}" %></strong></p>
+          </div>
+        <% end %>
+      <% end %>
+    <% else %>
+      <div class="row">
+        <% episode.data.each do |key, value| %>
+          <p><strong><%= "#{key}: " %></strong><%= "#{value}" %></p>
+        <% end %>
+      </div>
+    <% end %>
+  <br>
+  <% end %>
+</div>
