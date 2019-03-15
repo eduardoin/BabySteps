@@ -1,4 +1,4 @@
 class Fever < Episode
-  episode_attr :temperature, :note
+  episode_attr :temperature
   validates :temperature, presence: true, numericality: true
 end
