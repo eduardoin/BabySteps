@@ -1,4 +1,4 @@
-<a href="#" class="crying-card" data-toggle="modal" data-target="#exampleModalCenter">
+<%= link_to new_kid_episode_path(@kid, type: "Crying"), class: 'crying-card' do %>
   <div class="crying-card-badge">
     <div class="crying-card-icon">
       <%= svg_tag "babysteps-crying.svg" %>
@@ -8,4 +8,4 @@
     <h2 class="episode-card-type">Crying</h2>
     <p class="episode-card-subtitle">Crying intensity is as important as frequency.</p>
   </div>
-</a>
+<% end %>

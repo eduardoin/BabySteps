@@ -1,4 +1,4 @@
-<a href="#" class="other-card" data-toggle="modal" data-target="#exampleModalCenter">
+<%= link_to new_kid_episode_path(@kid, type: "Other"), class: 'other-card' do %>
   <div class="other-card-badge">
     <div class="other-card-icon">
       <%= svg_tag "babysteps-other.svg" %>
@@ -8,4 +8,4 @@
     <h2 class="episode-card-type">Other Thing</h2>
     <p class="episode-card-subtitle">You can log here any other kind of incident.</p>
   </div>
-</a>
+<% end %>
