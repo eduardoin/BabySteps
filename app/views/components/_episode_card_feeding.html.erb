@@ -1,4 +1,4 @@
-<a href="#" class="feeding-card" data-toggle="modal" data-target="#exampleModalCenter">
+<%= link_to new_kid_episode_path(@kid, type: "Feeding"), class: 'feeding-card' do %>
   <div class="feeding-card-badge">
     <div class="feeding-card-icon">
       <%= svg_tag "babysteps-bottle.svg" %>
@@ -8,4 +8,4 @@
     <h2 class="episode-card-type">Feeding</h2>
     <p class="episode-card-subtitle">Track all baby bottles, fruits, snacks and meals.</p>
   </div>
-</a>
+<% end %>
