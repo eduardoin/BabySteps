@@ -1,14 +1,27 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+  <div class="navbar-content">
+    <div class="navbar-kid-genmenu">
+      <%= link_to "#", class: "navbar-kid" do %>
+      <img src="http://eduardoin.com/le-wagon/baby-sophia.png" alt="">
+      <h1 class="current-kid-name">Sophia</h1>
     <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    </div>
+
+    <div class="kid-menu">
+      <a class="kid-menu-item active" href="">tracking</a>
+      <a class="kid-menu-item" href="">full log</a>
+      <a class="kid-menu-item" href="">chart</a>
+      <a class="kid-menu-item" href="">share</a>
+    </div>
+  </div>
+</div>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
@@ -32,4 +45,3 @@
       <% end %>
     </ul>
   </div>
-</div>

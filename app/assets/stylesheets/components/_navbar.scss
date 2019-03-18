@@ -1,13 +1,113 @@
-.navbar-lewagon {
-  justify-content: space-between;
+.navbar {
+  width: 100%;
+  height: 200px;
+  padding: 32px 24px 0 24px;
   background: white;
-  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
-
+.navbar-content {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.navbar-kid-genmenu {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+i.fa-bars {
+  font-size: 26px;
+  color: $light-main;
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
-
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+.navbar-kid {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.navbar-kid img {
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  margin-right: 16px;
+}
+a.navbar-kid {
+  color: $dark-main;
+  transition: color 0.3s ease;
+}
+a.navbar-kid:hover {
+  color: $hover-main;
+  text-decoration: none;
+}
+.current-kid-name {
+  margin: 0 0 2px 0;
+}
+.kid-menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.kid-menu-item {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.055em;
+  color: $light-main;
+  padding: 10px 0;
+  position: relative;
+  top: 15px;
+}
+.kid-menu-item:hover {
+  color: $dark-main;
+  text-decoration: none;
+}
+.kid-menu-item.active {
+  color: $dark-main;
+  border-bottom: solid 4px rgba(34,51,68,0.1);
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    height: 148px;
+  }
+  .navbar-content {
+    width: 920px;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+  .navbar-kid-genmenu {
+    position: relative;
+    right: 116px;
+    bottom: 16px;
+  }
+  .kid-menu {
+    justify-content: flex-end;
+  }
+  .kid-menu-item {
+    font-size: 18px;
+    padding: 29px 0;
+    margin: 0 24px;
+    top: 23px;
+  }
+  .kid-menu-item:last-child {
+    margin: 0 0 0 24px;
+  }
 }
