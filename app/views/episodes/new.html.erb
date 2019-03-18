@@ -2,6 +2,6 @@
   <%= render "#{@episode.type.downcase}_inputs", form: form %>
   <%= form.input :type, as: :hidden %>
   <%= form.input :note, as: :text %>
-  <%= form.input :tracked_at %>
+  <%= form.input :tracked_at, html5: true %>
   <%= form.submit %>
 <% end %>
