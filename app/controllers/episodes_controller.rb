@@ -36,7 +36,7 @@ class EpisodesController < ApplicationController
     @episode = Episode.find(params[:id])
     @kid = Kid.find(params[:kid_id])
     @episode.destroy
-    flash[:notice] = "You updated #{@episode.type} episode to your #{@kid.name} profile successfully."
+    flash[:notice] = "You deleted #{@episode.type} episode to your #{@kid.name} profile successfully."
     redirect_to full_log_kid_path(@kid)
   end
 
