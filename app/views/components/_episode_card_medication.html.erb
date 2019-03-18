@@ -1,4 +1,4 @@
-<a href="#" class="medication-card" data-toggle="modal" data-target="#exampleModalCenter">
+<%= link_to new_kid_episode_path(@kid, type: "Medication"), class: 'medication-card' do %>
   <div class="medication-card-badge">
     <div class="medication-card-icon">
       <%= svg_tag "babysteps-medication.svg" %>
@@ -8,4 +8,4 @@
     <h2 class="episode-card-type">Medication</h2>
     <p class="episode-card-subtitle">Don't forget to add the amout.</p>
   </div>
-</a>
+<% end %>
