@@ -4,4 +4,8 @@ module ApplicationHelper
       raw file.read
     end
   end
+
+  def current_class?(nav_path)
+    request.path == nav_path ? 'kid-menu-item active' : 'kid-menu-item'
+  end
 end
