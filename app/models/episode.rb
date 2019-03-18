@@ -1,6 +1,6 @@
 class Episode < ApplicationRecord
   belongs_to :kid
-  validates :tracked_at, :data, presence: true
+  validates :tracked_at, presence: true
 
   default_scope { order('tracked_at DESC') }
 
