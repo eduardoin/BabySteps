@@ -1,12 +1,8 @@
 <div class="row episodes-panel">
   <div class="col-xs-12 episodes-list">
-    <div><%= render 'components/episode_card_diaper' %></div>
-    <div><%= render 'components/episode_card_feeding' %></div>
-    <div><%= render 'components/episode_card_crying' %></div>
-    <div><%= render 'components/episode_card_medication' %></div>
-    <div><%= render 'components/episode_card_fever' %></div>
-    <div><%= render 'components/episode_card_vomiting' %></div>
-    <div><%= render 'components/episode_card_bruise' %></div>
-    <div><%= render 'components/episode_card_other' %></div>
+    <% @episodes.each do |episode| %>
+      <%= render 'components/episode_card', kid: @kid, episode: episode %>
+      <%= render 'components/modal', kid: @kid, episode: episode %>
+    <% end %>
   </div>
 </div>

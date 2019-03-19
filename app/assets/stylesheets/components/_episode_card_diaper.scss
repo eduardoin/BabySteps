@@ -1,12 +1,12 @@
-.diaper-card {
+.diaper_changing-card {
   display: flex;
   flex-direction: row;
   margin-bottom: 32px;
 }
-.diaper-card:hover {
+.diaper_changing-card:hover {
   text-decoration: none;
 }
-.diaper-card-badge {
+.diaper_changing-card-badge {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@
   background-color: $light-diaper;
   margin-right: 20px;
 }
-.diaper-card-icon svg {
+.diaper_changing-card-icon svg {
   width: 26px;
   margin-top: 2px;
 }
@@ -37,7 +37,7 @@ p.episode-card-subtitle {
   margin: 0;
 }
 @media (min-width: 992px) {
-  .diaper-card {
+  .diaper_changing-card {
     border: solid 1px $line-main;
     border-radius: 8px;
     background-color: $white;
@@ -49,15 +49,15 @@ p.episode-card-subtitle {
     box-shadow: 0 0 4px rgba(0,0,0,0);
     transition: border 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
   }
-  .diaper-card:hover {
+  .diaper_changing-card:hover {
     border: solid 1px $light-diaper;
     background-color: $light-diaper;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-    .diaper-card-badge {
+    .diaper_changing-card-badge {
     background-color: $white;
   }
   }
-  .diaper-card-badge {
+  .diaper_changing-card-badge {
     width: 80px;
     height: 80px;
     margin-right: 0;
@@ -65,7 +65,7 @@ p.episode-card-subtitle {
     transition: background-color 0.5s ease;
   }
 
-  .diaper-card-icon svg {
+  .diaper_changing-card-icon svg {
     width: 42px;
   }
   .episode-card-text {
