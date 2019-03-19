@@ -42,6 +42,7 @@ class KidsController < ApplicationController
   end
 
   def tracking
+    @episodes = Episode.new_from_types
   end
 
   def full_log
