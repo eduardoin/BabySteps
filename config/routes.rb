@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get 'pages/sidebar', to: 'pages#sidebar'
   resources :kids do
     member do
       get 'tracking'

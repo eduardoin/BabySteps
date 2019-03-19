@@ -1,0 +1,92 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.container-sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: strech;
+}
+
+.main {
+  background: white;
+  width: 100%;
+ -ms-flex: 1;
+ -webkit-box-flex: 1;
+ -moz-box-flex: 1;
+ -ms-box-flex: 1;
+ box-flex: 1;
+}
+
+.display-fig {
+  height: 100px;
+  margin: 24px;
+}
+
+.display-fig svg {
+
+  left: 4.0%;
+  right: 91.77%;
+  top: 6.11%;
+  bottom: 91.78%;
+}
+
+.rownav {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.sidebar_kids_link {
+
+  font-family: Source Sans Pro;
+  font-size: 18px;
+  line-height: normal;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.display-links-kids{
+padding: 20px;
+}
+
+.sidebar_actions_link {
+  padding: 20px 20px;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: normal;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.display-links {
+padding: 20px 0px;
+}
+
+.sidebar-drawer {
+  background-color: #223344;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  display: block;
+  z-index: 12;
+  height: 100%;
+  transition: right ease-out 0.25s;
+
+  &.active {
+    right: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .sidebar-drawer {
+    position: static;
+  }
+}
+

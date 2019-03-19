@@ -4,7 +4,7 @@
   padding: 32px 24px 0 24px;
   background: white;
   box-shadow: 0 0 12px rgba(0,0,0,0.05);
-  position: fixed;
+
   top: 0;
   z-index: 10;
 }
@@ -89,12 +89,12 @@ a.navbar-kid:hover {
     height: 148px;
   }
   .navbar-content {
-    width: 920px;
+    // width: 920px;
     margin: 0 auto;
     flex-direction: row;
   }
   .navbar-kid-genmenu {
-    position: relative;
+    // position: relative;
     right: 116px;
     bottom: 16px;
   }
