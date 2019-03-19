@@ -1,0 +1,175 @@
+
+.modal-backdrop {
+  background-color: $border-main;
+}
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+.modal-dialog {
+  margin: 0;
+}
+.modal-content {
+  border: none;
+  border-radius: 0;
+  height: 100vh;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+// HEADER -----------------------------------------
+
+.modal-header {
+  background-color: $white;
+  z-index: 2000;
+  padding: 0 0 24px 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: none;
+  letter-spacing: 0.055em;
+}
+.modal-episode-type {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modal-draw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 15px 0;
+}
+.modal-string {
+  width: 2px;
+  height: 40px;
+  background-color: $line-main;
+}
+.modal-diaper-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $light-diaper;
+}
+.modal-diaper-icon svg {
+  width: 26px;
+  margin-top: 2px;
+}
+.modal-title {
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+.modal-header .close {
+  margin: 0;
+  padding: 20px 24px 24px 24px;
+}
+.close {
+  opacity: 0.3;
+}
+
+// CONTENT ----------------------------------------
+
+.modal-body {
+  padding: 0 24px;
+}
+.modal-dialog-centered {
+  // min-height: 100vh;
+}
+input, textarea {
+  width: 100%;
+  margin: 0 0 40px 0;
+  border: solid 1px #DEE0E3;
+  border-radius: 4px;
+  padding: 11px 12px;
+  font-size: 18px;
+  color: $dark-main;
+}
+input::placeholder, textarea::placeholder {
+  color: $light-main;
+}
+.modal-time input {
+  height: 45px;
+  text-transform: uppercase;
+  padding: 10px 12px 14px 12px;
+}
+.modal-time input::placeholder {
+  color: $dark-main;
+}
+.modal-food-type {
+  padding: 0;
+}
+.modal label {
+  color: $medium-main;
+  font-size: 18px;
+  line-height: 1;
+  margin: 0 0 16px 0;
+}
+
+// FOOTER -----------------------------------------
+
+.modal-footer {
+  border-top: none;
+  padding: 0;
+}
+.btn-episode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 72px;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+}
+.btn-diaper {
+  color: $dark-main;
+  background-color: $dark-diaper;
+}
+.btn-diaper:hover {
+  text-decoration: none;
+  background-color: $hover-diaper;
+}
+
+// DESKTOP ----------------------------------------
+
+@media (min-width: 992px) {
+  .modal-dialog {
+    max-width: 730px;
+    margin: 1.75rem auto;
+  }
+  .modal-dialog-centered.modal-dialog-scrollable {
+    flex-direction: column;
+  }
+  .modal-dialog-centered {
+    min-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-scrollable {
+    max-height: calc(100% - 3.5rem);
+  }
+  .modal-content {
+    height: auto;
+    border-radius: 8px;
+  }
+  .modal-body {
+    padding: 0 95px;
+  }
+  .modal-header {
+    padding: 0 0 13px 25px;
+  }
+  .modal-episode-type {
+    flex-direction: row;
+  }
+  .modal-string {
+    height: 32px;
+  }
+  .modal-title {
+    margin: 34px 0 0 22px;
+  }
+  .btn-diaper {
+    border-radius: 0 0 8px 8px;
+  }
+}
