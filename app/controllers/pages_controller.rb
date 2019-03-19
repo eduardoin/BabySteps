@@ -6,5 +6,4 @@ class PagesController < ApplicationController
 
   def sidebar
   end
-
 end
