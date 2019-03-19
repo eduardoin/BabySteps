@@ -1,4 +1,4 @@
-<a href="#" class="diaper-card" data-toggle="modal" data-target="#modalDiaper">
+<%= link_to new_kid_episode_path(@kid, type: "DiaperChanging"), class: 'diaper-card' do %>
   <div class="diaper-card-badge">
     <div class="diaper-card-icon">
       <%= svg_tag "babysteps-diaper.svg" %>
@@ -8,4 +8,4 @@
     <h2 class="episode-card-type">Diaper Changing</h2>
     <p class="episode-card-subtitle">Track everytime the changes the diaper.</p>
   </div>
-</a>
+<% end %>
