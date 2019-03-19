@@ -10,13 +10,16 @@
       <i class="fas fa-bars"></i>
     </button>
     </div>
-
-    <div class="kid-menu">
-      <%= link_to 'tracking', tracking_kid_path(@kid.id), class: current_class?(tracking_kid_path(@kid.id)) %>
-      <%= link_to 'full log', full_log_kid_path(@kid.id), class: current_class?(full_log_kid_path(@kid.id)) %>
-      <a class="kid-menu-item" href="">chart</a>
-      <a class="kid-menu-item" href="">share</a>
-    </div>
+    <% if current_user.kids == [] %>
+      <%= link_to 'Add a new kid', new_kid_path, class: 'btn btn-primary' %>
+    <% else %>
+      <div class="kid-menu">
+        <%= link_to 'tracking', tracking_kid_path(@kid.id), class: current_class?(tracking_kid_path(@kid.id)) %>
+        <%= link_to 'full log', full_log_kid_path(@kid.id), class: current_class?(full_log_kid_path(@kid.id)) %>
+        <a class="kid-menu-item" href="">chart</a>
+        <a class="kid-menu-item" href="">share</a>
+      </div>
+    <% end %>
   </div>
 </div>
 
