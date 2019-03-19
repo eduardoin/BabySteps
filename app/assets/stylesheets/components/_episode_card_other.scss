@@ -1,23 +1,23 @@
-.episode-card {
+.other-card {
   display: flex;
   flex-direction: row;
   margin-bottom: 32px;
 }
-.episode-card:hover {
+.other-card:hover {
   text-decoration: none;
 }
-.episode-card-badge {
+.other-card-badge {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: $light-feeding;
+  background-color: $light-other;
   margin-right: 20px;
 }
-.episode-card-icon svg {
-  height: 28px;
+.other-card-icon svg {
+  width: 24px;
 }
 .episode-card-text {
   display: flex;
@@ -36,7 +36,7 @@ p.episode-card-subtitle {
   margin: 0;
 }
 @media (min-width: 992px) {
-  .episode-card {
+  .other-card {
     border: solid 1px $line-main;
     border-radius: 8px;
     background-color: $white;
@@ -45,18 +45,18 @@ p.episode-card-subtitle {
     height: 248px;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0);
+    box-shadow: 0 0 4px rgba(0,0,0,0);
     transition: border 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
   }
-  .episode-card:hover {
-    border: solid 1px $light-feeding;
-    background-color: $light-feeding;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-    .episode-card-badge {
+  .other-card:hover {
+    border: solid 1px $light-other;
+    background-color: $light-other;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    .other-card-badge {
     background-color: $white;
   }
   }
-  .episode-card-badge {
+  .other-card-badge {
     width: 80px;
     height: 80px;
     margin-right: 0;
@@ -64,8 +64,8 @@ p.episode-card-subtitle {
     transition: background-color 0.5s ease;
   }
 
-  .episode-card-icon svg {
-    height: 44px;
+  .other-card-icon svg {
+    width: 40px;
   }
   .episode-card-text {
     align-items: center;

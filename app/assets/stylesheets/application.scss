@@ -11,7 +11,17 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "components/episode_card";
+
+@import "components/episode_card_diaper";
+@import "components/episode_card_feeding";
+@import "components/episode_card_crying";
+@import "components/episode_card_medication";
+@import "components/episode_card_fever";
+@import "components/episode_card_vomiting";
+@import "components/episode_card_bruise";
+@import "components/episode_card_other";
+
+@import "components/modal";
 
 body {
   -webkit-font-smoothing: antialiased;
