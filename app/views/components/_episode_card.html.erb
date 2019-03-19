@@ -1,0 +1,11 @@
+<%= link_to new_kid_episode_path(kid, type: episode.type), data: { target: "#modal#{episode.type}", toggle: 'modal' }, class: "#{episode.type.underscore}-card" do %>
+  <div class= <%= "#{episode.type.underscore}-card-badge" %>>
+    <div class= <%= "#{episode.type.underscore}-card-icon" %>>
+      <%= svg_tag "babysteps-#{episode.type.underscore}.svg" %>
+    </div>
+  </div>
+  <div class="episode-card-text">
+    <h2 class="episode-card-type"><%= episode.name %></h2>
+    <p class="episode-card-subtitle"><%= episode.description %></p>
+  </div>
+<% end %>

@@ -21,14 +21,7 @@
 @import "components/episode_card_bruise";
 @import "components/episode_card_other";
 
-@import "components/modal_diaper";
-@import "components/modal_feeding";
-@import "components/modal_crying";
-@import "components/modal_medication";
-@import "components/modal_fever";
-@import "components/modal_vomiting";
-@import "components/modal_bruise";
-@import "components/modal_other";
+@import "components/modal";
 
 body {
   -webkit-font-smoothing: antialiased;
