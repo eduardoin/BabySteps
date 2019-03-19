@@ -1,34 +1,30 @@
-<div class="container">
+<ul class="list-unstyled">
   <% @episodes.each do |episode| %>
-
-    <div class="row">
-      <h4><%= episode.type %></h4>
-      <p>
-      <%= link_to "Delete this #{episode.type}", kid_episode_path(@kid, episode), method: :delete, data: { confirm: 'Are you sure?' } %>
-      </p>
-      <p>
-      <%= link_to "Update this #{episode.type}", edit_kid_episode_path(@kid, episode) %>
-      </p>
-    </div>
-    <div class="row">
-      <h5><%= episode.tracked_at %></h5>
-    </div>
-
-    <% if episode.type == "DiaperChanging" %>
-      <% episode.data.each do |key, value| %>
-        <% if value == "1" %>
-          <div class="row">
-            <p><strong><%= "#{key}" %></strong></p>
+    <li>
+      <div class="log_card">
+        <div class='<%= "log_card-badge bgc-#{episode.type.underscore}" %>'>
+         <div class="log_card-icon">
+              <%= svg_tag "babysteps-#{episode.type.underscore}.svg" %>
+            </div>
+        </div>
+        <div class="log_card-content">
+          <div class="log_card-text">
+            <p class="log_card-time"><%= episode.tracked_at.strftime('%b %e %A, %l:%M %p') %></p>
+            <h2 class="log_card-type"><%= episode.name %></h2>
+            <p class="log_card-subtitle"><%= episode.note %></p>
           </div>
-        <% end %>
-      <% end %>
-    <% else %>
-      <div class="row">
-        <% episode.data.each do |key, value| %>
-          <p><strong><%= "#{key}: " %></strong><%= "#{value}" %></p>
-        <% end %>
+        </div>
+        <div class="log_card-actions">
+          <button class="btn btn-default btn-sm " type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-v"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-left">
+            <li><%= link_to 'Edit', edit_kid_episode_path(episode.kid, episode) %></li>
+
+            <li><%= link_to 'Delete', kid_episode_path(episode.kid, episode), method: :delete %></li>
+          </ul>
+        </div>
       </div>
-    <% end %>
-  <br>
+    </li>
   <% end %>
-</div>
+</ul>
