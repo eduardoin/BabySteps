@@ -22,15 +22,15 @@
 .footer-links a:hover {
   color: #AAA !important;
 }
-.content {
-  flex: 1 0 auto;
-}
+// .content {
+//   flex: 1 0 auto;
+// }
 
 html, body {
   height: 100%;
 }
 body {
-  display: flex;
+  // display: flex;
   flex-direction: column;
 }
 .content {

@@ -1,0 +1,38 @@
+<div class="sidebar-drawer" id="drawer">
+  <button id="drawer-button" class="d-lg-none drawer-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="display-fig">
+    <%= svg_tag "babysteps-bottle.svg" %>
+  </div>
+  <div class="display-links-kids">
+    <div>
+      <%= link_to "Kids Name 1",  kids_path, class: "sidebar_kids_link" %>
+    </div>
+    <div>
+      <%= link_to "Kids Name 2",  kids_path, class: "sidebar_kids_link" %>
+    </div>
+    <div>
+      <%= link_to "Kids Name 3",  kids_path, class: "sidebar_kids_link" %>
+    </div>
+  </div>
+  <div class="display-links">
+    <div>
+      <%= link_to "Your Profile",  kids_path, class: "sidebar_actions_link" %>
+    </div>
+    <div>
+      <%= link_to "Add a New Kid",  kids_path, class: "sidebar_actions_link" %>
+    </div>
+    <div>
+      <%= link_to "Send Invitation",  kids_path, class: "sidebar_actions_link" %>
+    </div>
+  </div>
+  <div class="display-links">
+    <div>
+      <%= link_to "BabySteps Team",  kids_path, class: "sidebar_actions_link" %>
+    </div>
+    <div>
+      <%= link_to "Help",  kids_path, class: "sidebar_actions_link" %>
+    </div>
+  </div>
+</div>
