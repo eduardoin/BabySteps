@@ -1,0 +1,41 @@
+<div class="modal fade" id="modalDiaper" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-episode-type">
+          <div class="modal-draw">
+            <div class="modal-string"></div>
+            <div class="modal-diaper-badge">
+              <div class="modal-diaper-icon">
+                <%= svg_tag "babysteps-diaper.svg" %>
+              </div>
+            </div>
+          </div>
+          <h5 class="modal-title" id="exampleModalCenterTitle">Diaper Changing</h5>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <%= svg_tag "modal-close.svg" %>
+        </button>
+      </div>
+
+      <div class="modal-body modal-diaper">
+        <div class="modal-time">
+          <input type="text" placeholder="MAR/15/2019   2:32AM">
+        </div>
+        <div class="modal-food-type">
+          <label for="">What has she eaten?</label><br />
+          <input type="text" placeholder="Breast milk, banana, baby food...">
+        </div>
+        <div class="modal-note">
+          <label for="">Would you like to mention something?</label><br />
+          <input type="text" placeholder="Type it here">
+          <!-- <textarea rows="4" cols="50" placeholder="Type it here"></textarea> -->
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-episode btn-diaper"><span>Save</span></button>
+      </div>
+    </div>
+  </div>
+</div>

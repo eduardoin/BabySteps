@@ -43,17 +43,17 @@
   height: 40px;
   background-color: $line-main;
 }
-.modal-badge {
+.modal-bruise-badge {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: $light-feeding;
+  background-color: $light-bruise;
 }
-.modal-icon svg {
-  height: 28px;
+.modal-bruise-icon svg {
+  width: 28px;
 }
 .modal-title {
   font-size: 42px;
@@ -124,13 +124,13 @@ input::placeholder, textarea::placeholder {
   border: none;
   border-radius: 0;
 }
-.btn-feeding {
+.btn-bruise {
   color: $dark-main;
-  background-color: $dark-feeding;
+  background-color: $dark-bruise;
 }
-.btn-feeding:hover {
+.btn-bruise:hover {
   text-decoration: none;
-  background-color: $hover-feeding;
+  background-color: $hover-bruise;
 }
 
 // DESKTOP ----------------------------------------
@@ -168,7 +168,7 @@ input::placeholder, textarea::placeholder {
   .modal-title {
     margin: 34px 0 0 22px;
   }
-  .btn-feeding {
+  .btn-bruise {
     border-radius: 0 0 8px 8px;
   }
 }
