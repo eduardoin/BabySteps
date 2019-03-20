@@ -101,7 +101,14 @@ h2.log_card-type {
   font-size: 16px;
   margin: 3px 0 1px 0;
 }
-p.log_card-time{
+
+ul.list-inline{
+  color: $medium-main;
+  font-size: 14px;
+  margin: 0;
+}
+
+p.log_card-time {
   color: $medium-main;
   font-size: 14px;
   margin: 0;
@@ -112,6 +119,7 @@ p.log_card-subtitle {
   font-size: 14px;
   margin: 0;
 }
+
 
 .btn-group_dropleft {
    display: flex;
