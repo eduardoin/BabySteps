@@ -9,7 +9,7 @@ function refreshForm(innerHTML) {
   document.querySelector('#modal<%= @episode.type %> .close').click();
   window.swal("Added <%= @episode.title %>!", {
     buttons: false,
-    timer: 900,
+    timer: 1500,
     icon: 'success'
   });
 <% end %>
