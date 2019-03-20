@@ -10,7 +10,7 @@
         <div class="log_card-content">
           <div class="log_card-text">
             <p class="log_card-time"><%= episode.tracked_at.strftime('%b %e %A, %l:%M %p') %></p>
-            <h2 class="log_card-type"><%= episode.name %></h2>
+            <h2 class="log_card-type"><%= episode.type %></h2>
               <ul class="list-inline">
                 <%= episode.present_log %>
               </ul>
