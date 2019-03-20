@@ -13,6 +13,19 @@
   height: 100vh;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
+.simple_form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.mx-1 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  font-size: 16px;
+}
+.form-control {
+  height: 40px;
+}
 
 // HEADER -----------------------------------------
 
@@ -20,6 +33,7 @@
   background-color: $white;
   z-index: 2000;
   padding: 0 0 24px 24px;
+  height: 205px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -189,9 +203,11 @@
 .modal-dialog-centered {
   // min-height: 100vh;
 }
+.form-group {
+  margin: 0 0 24px 0;
+}
 input, textarea {
   width: 100%;
-  margin: 0 0 40px 0;
   border: solid 1px #DEE0E3;
   border-radius: 4px;
   padding: 11px 12px;
@@ -216,7 +232,33 @@ input::placeholder, textarea::placeholder {
   color: $medium-main;
   font-size: 18px;
   line-height: 1;
-  margin: 0 0 16px 0;
+  margin: 0 0 8px 0;
+}
+.form-check {
+  padding-left: 0;
+  margin-bottom: -32px;
+}
+.form-check-input {
+  margin-top: 13px;
+  margin-left: 0;
+}
+.form-check-label {
+  margin: 10px 0 0 0 !important;
+  padding-left: 24px;
+}
+.episode_rash .form-check,
+.episode_pee .form-check,
+.episode_poop .form-check,
+.episode_diarrhea .form-check,
+.episode_blood .form-check
+ {
+  margin-bottom: -28px;
+  background-color: #F8F9F9;
+  border-radius: 4px;
+  height: 40px;
+}
+.episode_blood .form-check {
+  margin-bottom: 0;
 }
 
 // FOOTER -----------------------------------------
@@ -224,6 +266,7 @@ input::placeholder, textarea::placeholder {
 .modal-footer {
   border-top: none;
   padding: 0;
+  z-index: 1000;
 }
 .btn-episode {
   display: flex;
@@ -319,9 +362,33 @@ input::placeholder, textarea::placeholder {
   background-color: $hover-vomiting;
 }
 
+// PHABLETS ---------------------------------------
+
+@media (min-width: 375px) {
+  .form-control {
+    height: 48px;
+  }
+  .modal label {
+    margin: 0 0 16px 0;
+  }
+  .form-group {
+    margin: 0 0 32px 0;
+  }
+}
+
 // DESKTOP ----------------------------------------
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 767px;
+  }
+}
+@media only screen
+and (max-width : 600px){
+
+}
+
+@media (min-width: 768px) {
   .modal-dialog {
     max-width: 730px;
     margin: 1.75rem auto;
@@ -343,6 +410,7 @@ input::placeholder, textarea::placeholder {
     padding: 0 95px;
   }
   .modal-header {
+    height: 108px;
     padding: 0 0 13px 25px;
   }
   .modal-episode-type {
@@ -354,6 +422,12 @@ input::placeholder, textarea::placeholder {
   .modal-title {
     margin: 34px 0 0 22px;
   }
+  .form-group {
+    margin: 0 0 40px 0;
+  }
+  .form-group:last-child {
+    margin: 0 0 56px 0;
+  }
 
   //BTN FOR DESKTOP
   //CRYING
@@ -363,11 +437,6 @@ input::placeholder, textarea::placeholder {
 
   //BRUISE
   .btn-bruise {
-    border-radius: 0 0 8px 8px;
-  }
-
-  //DIAPER CHANGING
-  .btn-diaper_changing {
     border-radius: 0 0 8px 8px;
   }
 
@@ -394,5 +463,36 @@ input::placeholder, textarea::placeholder {
   //VOMITING
   .btn-vomiting {
     border-radius: 0 0 8px 8px;
+  }
+
+  //DIAPER CHANGING
+  .btn-diaper_changing {
+    border-radius: 0 0 8px 8px;
+  }
+  .form-check {
+    padding-left: 0;
+    margin-bottom: -32px;
+  }
+  .form-check-input {
+    margin-top: 12px;
+    margin-left: 0;
+  }
+  .form-check-label {
+    margin: 10px 0 0 0 !important;
+    padding-left: 32px;
+  }
+  .episode_rash .form-check,
+  .episode_pee .form-check,
+  .episode_poop .form-check,
+  .episode_diarrhea .form-check,
+  .episode_blood .form-check
+   {
+    margin-bottom: -28px;
+    background-color: $white;
+    border-radius: 0;
+    height: 24px;
+  }
+  .episode_blood .form-check {
+    margin-bottom: 0;
   }
 }
