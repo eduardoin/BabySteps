@@ -2,6 +2,6 @@
   <%= render "#{@episode.type.underscore}_inputs", form: form %>
   <%= form.input :type, as: :hidden %>
   <%= form.input :note, as: :text %>
-  <%= form.input :tracked_at, html5: true %>
+  <%= form.input :tracked_at, html5: true, input_html: { value: Time.now.strftime("%Y-%m-%dT%H:%M") } %>
   <%= form.submit %>
 <% end %>
