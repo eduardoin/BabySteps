@@ -20,8 +20,24 @@ class Episode < ApplicationRecord
     type.underscore.humanize.titlecase
   end
 
-  def description
-    'Default description'
+  def description(title)
+    if title == "Diaper Changing"
+      'Track everytime the changes the diaper.'
+    elsif title == "Feeding"
+      'Track all baby bottles, fruits, snacks and meals.'
+    elsif title == "Crying"
+      'Crying intensity is as important as frequency.'
+    elsif title == "Medication"
+      "Don't forget to add the amout."
+    elsif title == "Fever"
+      "Temperature and frequency are keys for kids."
+    elsif title == "Vomiting"
+      "Try to describe the incident with details."
+    elsif title == "Bruise"
+      "Try to describe the incident with details."
+    else
+      "You can log here any other kind of incident."
+    end
   end
 
   def present_log

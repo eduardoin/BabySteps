@@ -6,6 +6,6 @@
   </div>
   <div class="episode-card-text">
     <h2 class="episode-card-type"><%= episode.title %></h2>
-    <p class="episode-card-subtitle"><%= episode.description %></p>
+    <p class="episode-card-subtitle"><%= episode.description(episode.title) %></p>
   </div>
 <% end %>
