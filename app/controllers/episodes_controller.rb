@@ -29,10 +29,14 @@ class EpisodesController < ApplicationController
     @episode = Episode.find(params[:id])
     @kid = Kid.find(params[:kid_id])
     if @episode.update(episode_params)
-      flash[:notice] = "You updated #{@episode.type} episode to your #{@kid.name} profile successfully."
-      redirect_to full_log_kid_path(@kid)
+      respond_to do |format|
+        format.html { redirect_to full_log_kid_path(@kid) }
+        format.js
+      end
     else
-      render :new
+      respond_to do |format|
+        format.js
+      end
     end
   end
 
@@ -40,7 +44,7 @@ class EpisodesController < ApplicationController
     @episode = Episode.find(params[:id])
     @kid = Kid.find(params[:kid_id])
     @episode.destroy
-    flash[:notice] = "You deleted #{@episode.type} episode to your #{@kid.name} profile successfully."
+    flash[:notice] = "You deleted #{@episode.title} episode to your #{@kid.name} profile successfully."
     redirect_to full_log_kid_path(@kid)
   end
 

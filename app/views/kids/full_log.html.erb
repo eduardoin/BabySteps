@@ -1,5 +1,6 @@
 <ul class="list-unstyled">
   <% @episodes.each do |episode| %>
+    <%= render 'components/update_modal', kid: @kid, episode: episode %>
     <li>
       <div class="log_card">
         <div class='<%= "log_card-badge bgc-#{episode.type.underscore}" %>'>
@@ -24,7 +25,10 @@
           <div class="dropdown-menu kebab-drop">
 
           <ul class="btn-group dropleft display-ul">
-            <li><%= link_to 'Edit', edit_kid_episode_path(episode.kid, episode) %></li>
+            <li><%= link_to edit_kid_episode_path(@kid, episode), data: { target: "#modal#{episode.type}", toggle: 'modal' } do%>
+                Edit
+              <% end %>
+            </li>
 
             <li><%= link_to 'Delete', kid_episode_path(episode.kid, episode), method: :delete %></li>
           </ul>
@@ -35,4 +39,3 @@
     </li>
   <% end %>
 </ul>
-
