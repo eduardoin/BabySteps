@@ -1,5 +1,5 @@
 class KidsController < ApplicationController
-  before_action :set_kid, only: %i[show edit update destroy tracking full_log]
+  before_action :set_kid, only: %i[new index show edit update destroy tracking full_log]
 
   def index
     @kids = current_user.kids
@@ -42,6 +42,7 @@ class KidsController < ApplicationController
   end
 
   def tracking
+
     @episodes = Episode.new_from_types
   end
 
@@ -56,6 +57,10 @@ class KidsController < ApplicationController
   end
 
   def set_kid
-    @kid = Kid.find(params[:id])
+    if params[:id]
+      @kid = Kid.find(params[:id])
+    else
+      @kid = current_user.kids.first
+    end
   end
 end
