@@ -1,0 +1,37 @@
+<li>
+  <div class="log_card">
+    <div class="log_card-badge">
+     <div class="log_card-icon">
+        <%= svg_tag "babysteps-#{episode.type.underscore}.svg" %>
+      </div>
+    </div>
+    <div class="log_card-content">
+      <div class="log_card-text">
+        <p class="log_card-time"><%= episode.tracked_at.strftime("%A, %e %b - %l:%M%p") %></p>
+        <h2 class="log_card-type"><%= episode.type %></h2>
+        <% if episode.type == "DiaperChanging" %>
+          <% episode.data.each do |key, value| %>
+            <% if value == "1" %>
+              <p class="log_card-subtitle">
+                <%= "#{key}" %>
+              </p>
+            <% end %>
+          <% end %>
+        <%else %>
+          <% episode.data.each do |key, value| %>
+            <p class="log_card-subtitle">
+              <%= "#{key}: #{value}" %>
+            </p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="log_card-actions">
+      <div class="btn-group dropleft">
+        <button type="button" class="btn btn-default btn-sm">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</li>

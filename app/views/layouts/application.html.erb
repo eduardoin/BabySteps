@@ -10,20 +10,23 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-
     <% exclude_navbar_from_views = ['sessions', 'passwords', 'registrations', 'pages'] %>
     <% if exclude_navbar_from_views.include?(controller_name) %>
       <%= yield %>
     <% else %>
-      <div class="content">
-        <%= render 'shared/navbar' %>
-        <div class="container">
-          <%= render 'shared/flashes' %>
-          <%= yield %>
-        </div>
+      <div class="container-sidebar">
+        <%= render 'shared/sidebar' %>
+          <div class="main">
+             <div class="rownav">
+                <%= render 'shared/navbar' %>
+             </div>
+             <div class="rowcontent">
+              <%= render 'shared/flashes' %>
+              <%= yield %>
+             </div>
+          </div>
       </div>
     <% end %>
-
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

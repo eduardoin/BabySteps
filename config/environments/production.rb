@@ -97,4 +97,4 @@ Rails.application.configure do
 
   # SVG precompilation
   config.assets.precompile += %w( '.svg' )
-Cend
+end
