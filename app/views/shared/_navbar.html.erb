@@ -3,25 +3,18 @@
     <div class="navbar-kid-genmenu">
       <%= link_to "#", class: "navbar-kid" do %>
 
-      <% if @kid.photo.url %>
+      <% if @kid != nil && @kid.photo.url %>
         <%= cl_image_tag @kid.photo %>
       <% else  %>
 
         <%= image_tag "fakebaby.svg" %>
       <% end %>
 
-
-
-
-
-
-
-
-      <h1 class="current-kid-name"><%= @kid ? @kid.name : "pop" %></h1>
+      <h1 class="current-kid-name"><%= @kid ? @kid.name : "" %></h1>
       <% end %>
     </div>
 
-    <% if current_user.kids == [] || @kid.id == nil %>
+    <% if current_user.kids == [] || @kid == nil %>
 
     <% else %>
       <div class="kid-menu">

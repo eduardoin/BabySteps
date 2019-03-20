@@ -6,9 +6,6 @@
     <%= svg_tag "babysteps-feeding.svg" %>
   </div>
 
-
-
-
   <div class="display-links-kids">
     <% current_user.kids.each do |kid| %>
      <div>
@@ -17,15 +14,9 @@
     <% end %>
   </div>
 
-
-
-
-
-
-
   <div class="display-links">
     <div>
-      <%= link_to "Your Profile",  kids_path, class: "sidebar_actions_link" %>
+      <%= link_to "Your Profile",  pages_your_profile_path, class: "sidebar_actions_link" %>
     </div>
     <div>
       <%= link_to "Add a New Kid",  new_kid_path, class: "sidebar_actions_link" %>

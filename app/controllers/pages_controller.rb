@@ -6,4 +6,8 @@ class PagesController < ApplicationController
 
   def sidebar
   end
+
+  def your_profile
+    @user = current_user
+  end
 end
