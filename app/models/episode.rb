@@ -23,4 +23,15 @@ class Episode < ApplicationRecord
   def description
     'Default description'
   end
+
+  def present_log
+    last_key = data.keys.last
+    data.map do |key, value|
+      <<-HTML
+        <li class="log_card-subtitle" style="display: inline;">
+          #{value}#{',' unless last_key == key}
+        </li>
+      HTML
+    end.join.html_safe
+  end
 end
