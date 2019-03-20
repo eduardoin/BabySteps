@@ -2,15 +2,10 @@
   <div class="navbar-content">
     <div class="navbar-kid-genmenu">
       <%= link_to "#", class: "navbar-kid" do %>
-
-
-
-
-
-
       <% if controller_name == "kids" && action_name == "new" %>
         <h2>New Profile</h2>
       <% elsif @kid.photo.url %>
+
         <%= cl_image_tag @kid.photo %>
       <% else  %>
 
@@ -18,20 +13,12 @@
       <% end %>
 
 
+      <h1 class="current-kid-name"><%= @kid ? @kid.name : "" %></h1>
 
-
-
-
-
-
-
-
-
-      <h1 class="current-kid-name"><%= @kid ? @kid.name : "pop" %></h1>
       <% end %>
     </div>
 
-    <% if current_user.kids == [] || @kid.id == nil %>
+    <% if current_user.kids == [] || @kid == nil %>
 
     <% else %>
       <div class="kid-menu">

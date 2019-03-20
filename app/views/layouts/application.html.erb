@@ -10,7 +10,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <% exclude_navbar_from_views = ['sessions', 'passwords', 'registrations', 'pages'] %>
+    <% exclude_navbar_from_views = ['sessions', 'passwords', 'registrations'] %>
     <% if exclude_navbar_from_views.include?(controller_name) %>
       <%= yield %>
     <% else %>
