@@ -8,26 +8,35 @@
   height: 100vh;
 }
 .episodes-panel {
-  margin: 240px 9px 0 9px;
+  margin: 40px 9px 0 9px;
 }
 .episodes-list {
-  display: flex;
-  flex-direction: column;
   margin: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .episodes-panel {
-    margin: 56px 95px 0 95px;
-  }
-  .episodes-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0;
+    margin: 56px 56px 0 56px;
   }
   .episodes-list li {
     display: inline;
+  }
+}
+
+@media (min-width: 1200px) {
+  .episodes-panel {
+    margin: 56px 40px 0 40px;
+  }
+}
+
+@media (min-width: 1320px) {
+  .episodes-panel {
+    margin: 56px 96px 0 96px;
+  }
+}
+
+@media (min-width: 1420px) {
+  .episodes-panel {
+    margin: 56px 144px 0 144px;
   }
 }

@@ -212,7 +212,7 @@ p.episode-card-subtitle {
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   //DESKTOP CARD CARD:HOVER BADGE ICON
   //BRUISE
   .bruise-card {
@@ -220,7 +220,7 @@ p.episode-card-subtitle {
     border-radius: 8px;
     background-color: $white;
     padding: 31px 23px 0 23px;
-    width: 212px;
+    width: 100%;
     height: 248px;
     flex-direction: column;
     align-items: center;
@@ -254,7 +254,7 @@ p.episode-card-subtitle {
     border-radius: 8px;
     background-color: $white;
     padding: 31px 23px 0 23px;
-    width: 212px;
+    width: 100%;
     height: 248px;
     flex-direction: column;
     align-items: center;
@@ -288,7 +288,7 @@ p.episode-card-subtitle {
     border-radius: 8px;
     background-color: $white;
     padding: 31px 23px 0 23px;
-    width: 212px;
+    width: 100%;
     height: 248px;
     flex-direction: column;
     align-items: center;
@@ -322,7 +322,7 @@ p.episode-card-subtitle {
     border-radius: 8px;
     background-color: $white;
     padding: 31px 23px 0 23px;
-    width: 212px;
+    width: 100%;
     height: 248px;
     flex-direction: column;
     align-items: center;
@@ -356,7 +356,7 @@ p.episode-card-subtitle {
     border-radius: 8px;
     background-color: $white;
     padding: 31px 23px 0 23px;
-    width: 212px;
+    width: 100%;
     height: 248px;
     flex-direction: column;
     align-items: center;
@@ -390,7 +390,7 @@ p.episode-card-subtitle {
     border-radius: 8px;
     background-color: $white;
     padding: 31px 23px 0 23px;
-    width: 212px;
+    width: 100%;
     height: 248px;
     flex-direction: column;
     align-items: center;
@@ -424,7 +424,7 @@ p.episode-card-subtitle {
     border-radius: 8px;
     background-color: $white;
     padding: 31px 23px 0 23px;
-    width: 212px;
+    width: 100%;
     height: 248px;
     flex-direction: column;
     align-items: center;
@@ -461,7 +461,7 @@ p.episode-card-subtitle {
     border-radius: 8px;
     background-color: $white;
     padding: 31px 23px 0 23px;
-    width: 212px;
+    width: 100%;
     height: 248px;
     flex-direction: column;
     align-items: center;
