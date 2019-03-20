@@ -1,5 +1,5 @@
 <%= simple_form_for [@kid, @episode], url: kid_episode_path, as: 'episode' do |form| %>
-  <%= render "#{@episode.type.downcase}_inputs", form: form %>
+  <%= render "#{@episode.type.underscore}_inputs", form: form %>
   <%= form.input :type, as: :hidden %>
   <%= form.input :note, as: :text %>
   <%= form.input :tracked_at, html5: true %>

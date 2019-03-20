@@ -1,7 +1,35 @@
-<div class="container">
-  <ul class="list-unstyled">
-    <% @episodes.each do |episode| %>
-      <%= render 'components/log_card', episode: episode %>
-    <% end %>
-  </ul>
-</div>
+<ul class="list-unstyled">
+  <% @episodes.each do |episode| %>
+    <li>
+      <div class="log_card">
+        <div class='<%= "log_card-badge bgc-#{episode.type.underscore}" %>'>
+         <div class="log_card-icon">
+              <%= svg_tag "babysteps-#{episode.type.underscore}.svg" %>
+            </div>
+        </div>
+        <div class="log_card-content">
+          <div class="log_card-text">
+            <p class="log_card-time"><%= episode.tracked_at.strftime('%b %e %A, %l:%M %p') %></p>
+            <h2 class="log_card-type"><%= episode.name %></h2>
+            <p class="log_card-subtitle"><%= episode.note %></p>
+          </div>
+        </div>
+        <div class="btn-group dropleft">
+          <button class="kebab-btn none-outline" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-v"></i>
+          </button>
+          <div class="dropdown-menu kebab-drop">
+
+          <ul class="btn-group dropleft display-ul">
+            <li><%= link_to 'Edit', edit_kid_episode_path(episode.kid, episode) %></li>
+
+            <li><%= link_to 'Delete', kid_episode_path(episode.kid, episode), method: :delete %></li>
+          </ul>
+          </div>
+        </div>
+
+      </div>
+    </li>
+  <% end %>
+</ul>
+

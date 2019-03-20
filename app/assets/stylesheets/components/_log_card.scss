@@ -1,0 +1,128 @@
+.log_card{
+  overflow: hidden;
+  display: flex;
+  padding: 20px;
+  &:hover {
+  background-color: $light-gray;
+  }
+
+}
+
+.log_card-content{
+  flex-grow: 1;
+}
+
+.log_card-actions{
+ font-size: 10px;
+}
+
+.kebab-btn{
+  position: relative;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0px;
+  padding: 1px 7px 2px;
+}
+
+.fa-ellipsis-v{
+  position: absolute;
+  top: 0px;
+  color: $medium-main;
+  &:hover{
+    color: $dark-main;
+  }
+}
+
+li{
+  a{
+    color: $medium-main;
+    &:hover{
+      text-decoration: none;
+      color: $dark-main;
+    }
+  }
+}
+
+.display-ul {
+  display: block;
+  list-style: none;
+}
+
+.kebab-drop{
+  min-width: 8rem;
+}
+
+.none-outline:focus{
+  box-shadow: none;
+  outline: none;
+}
+
+.log_card:hover {
+  text-decoration: none;
+}
+.log_card-badge {
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: $light-gray;
+    height: 48px;
+  }
+
+  &:before {
+    top: -100%;
+  }
+
+  &:after {
+    bottom: -100%;
+  }
+  position: relative;
+  display: flex;
+  flex: 0 0 60px;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.log_card-icon svg {
+  height: 24px;
+}
+.log_card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+h2.log_card-type {
+  color: $dark-main;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 3px 0 1px 0;
+}
+p.log_card-time{
+  color: $medium-main;
+  font-size: 14px;
+  margin: 0;
+}
+
+p.log_card-subtitle {
+  color: $medium-main;
+  font-size: 14px;
+  margin: 0;
+}
+
+.btn-group_dropleft {
+   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bgc-diaper_changing {
+  background-color: $light-diaper;
+}
+
+.bgc-crying {
+  background-color: $light-crying;
+}
