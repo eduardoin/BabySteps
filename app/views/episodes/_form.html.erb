@@ -3,7 +3,7 @@
     <%= render "episodes/#{episode.type.underscore}_inputs", form: form %>
     <%= form.input :type, as: :hidden, value: episode.type %>
     <%= form.input :note, as: :text %>
-    <%= form.input :tracked_at, html5: true %>
+    <%= form.input :tracked_at, html5: true, input_html: { value: Time.now.strftime("%Y-%m-%dT%H:%M") } %>
   </div>
   <div class="modal-footer">
     <%= form.button :submit, 'Save', class: "btn btn-episode btn-#{episode.type.underscore}" %>
