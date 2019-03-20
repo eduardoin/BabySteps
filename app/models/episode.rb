@@ -27,11 +27,15 @@ class Episode < ApplicationRecord
   def present_log
     last_key = data.keys.last
     data.map do |key, value|
-      <<-HTML
-        <li class="log_card-subtitle" style="display: inline;">
-          #{value}#{',' unless last_key == key}
-        </li>
-      HTML
+      list_tag { "#{value}#{',' unless last_key == key}" }
     end.join.html_safe
+  end
+
+  private
+
+  def list_tag
+    <<-HTML
+      <li class="log_card-subtitle" style="display: inline;">#{yield}</li>
+    HTML
   end
 end
