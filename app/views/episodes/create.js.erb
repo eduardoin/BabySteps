@@ -7,4 +7,9 @@ function refreshForm(innerHTML) {
   refreshForm('<%= j render "episodes/form", kid: @kid, episode: @episode %>');
 <% else %>
   document.querySelector('#modal<%= @episode.type %> .close').click();
+  window.swal("Added <%= @episode.title %>!", {
+    buttons: false,
+    timer: 1500,
+    icon: 'success'
+  });
 <% end %>
