@@ -16,7 +16,7 @@ class Episode < ApplicationRecord
 
   extend DataAttribute
 
-  def name
+  def title
     type.underscore.humanize.titlecase
   end
 
