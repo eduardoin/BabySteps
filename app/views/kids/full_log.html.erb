@@ -14,16 +14,20 @@
             <p class="log_card-subtitle"><%= episode.note %></p>
           </div>
         </div>
-        <div class="log_card-actions">
-          <button class="btn btn-default btn-sm " type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="btn-group dropleft">
+          <button class="kebab-btn none-outline" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-ellipsis-v"></i>
           </button>
-          <ul class="dropdown-menu dropdown-menu-left">
+          <div class="dropdown-menu kebab-drop">
+
+          <ul class="btn-group dropleft display-ul">
             <li><%= link_to 'Edit', edit_kid_episode_path(episode.kid, episode) %></li>
 
             <li><%= link_to 'Delete', kid_episode_path(episode.kid, episode), method: :delete %></li>
           </ul>
+          </div>
         </div>
+
       </div>
     </li>
   <% end %>
