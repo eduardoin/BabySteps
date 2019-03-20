@@ -11,24 +11,14 @@
               </div>
             </div>
           </div>
-          <h5 class="modal-title" id="exampleModalCenterTitle"><%= episode.name %></h5>
+          <h5 class="modal-title" id="exampleModalCenterTitle"><%= episode.title %></h5>
         </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <%= svg_tag "modal-close.svg" %>
         </button>
       </div>
 
-      <div class="modal-body modal-<%=episode.type.underscore%>">
-        <%= simple_form_for [kid, episode], url: kid_episodes_path(kid), as: 'episode' do |form| %>
-          <%= render "episodes/#{episode.type.underscore}_inputs", form: form %>
-          <%= form.input :type, as: :hidden, value: episode.type %>
-          <%= form.input :note, as: :text %>
-          <%= form.input :tracked_at, html5: true %>
-      </div>
-          <div class="modal-footer">
-            <%= form.button :submit, 'Save', class: "btn btn-episode btn-#{episode.type.underscore}" %>
-          </div>
-        <% end %>
+      <%= render 'episodes/form', kid: kid, episode: episode %>
     </div>
   </div>
 </div>

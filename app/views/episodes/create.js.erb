@@ -1,0 +1,15 @@
+function refreshForm(innerHTML) {
+  const newReviewForm = document.querySelector('#modal<%= @episode.type %> form');
+  newReviewForm.innerHTML = innerHTML;
+}
+
+<% if @episode.errors.any? %>
+  refreshForm('<%= j render "episodes/form", kid: @kid, episode: @episode %>');
+<% else %>
+  document.querySelector('#modal<%= @episode.type %> .close').click();
+  window.swal("Added <%= @episode.title %>!", {
+    buttons: false,
+    timer: 1500,
+    icon: 'success'
+  });
+<% end %>
