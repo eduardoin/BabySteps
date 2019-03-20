@@ -3,12 +3,22 @@
     <div class="navbar-kid-genmenu">
       <%= link_to "#", class: "navbar-kid" do %>
 
-      <% if @kid.photo.url %>
+
+
+
+
+
+      <% if controller_name == "kids" && action_name == "new" %>
+        <h2>New Profile</h2>
+      <% elsif @kid.photo.url %>
         <%= cl_image_tag @kid.photo %>
       <% else  %>
 
         <%= image_tag "fakebaby.svg" %>
       <% end %>
+
+
+
 
 
 
