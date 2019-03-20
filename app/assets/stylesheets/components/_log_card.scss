@@ -67,7 +67,7 @@ li{
     position: absolute;
     width: 1px;
     background: $light-gray;
-    height: 48px;
+    height: 60px;
   }
 
   &:before {
@@ -125,4 +125,23 @@ p.log_card-subtitle {
 
 .bgc-crying {
   background-color: $light-crying;
+}
+
+.bgc-medication {
+  background-color: $light-medication;
+}
+
+.bgc-vomiting {
+  background-color: $light-vomiting;
+}
+
+.bgc-bruise {
+  background-color: $light-bruise;
+}
+
+.bgc-fever {
+  background-color: $light-fever;
+}
+.bgc-feeding {
+  background-color: $light-feeding;
 }
