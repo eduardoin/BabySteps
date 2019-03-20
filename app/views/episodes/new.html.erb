@@ -1,7 +1,0 @@
-<%= simple_form_for [@kid, @episode], url: kid_episodes_path, as: 'episode' do |form| %>
-  <%= render "#{@episode.type.underscore}_inputs", form: form %>
-  <%= form.input :type, as: :hidden %>
-  <%= form.input :note, as: :text %>
-  <%= form.input :tracked_at, html5: true %>
-  <%= form.submit %>
-<% end %>

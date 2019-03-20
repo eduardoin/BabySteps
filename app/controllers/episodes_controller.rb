@@ -9,10 +9,14 @@ class EpisodesController < ApplicationController
     @episode = Episode.new(episode_params)
     @episode.kid = @kid
     if @episode.save
-      flash[:notice] = "You added #{@episode.type} episode to your #{@kid.name} profile successfully."
-      redirect_to tracking_kid_path(@kid)
+      respond_to do |format|
+        format.html { redirect_to tracking_kid_path(@kid) }
+        format.js
+      end
     else
-      render :new
+      respond_to do |format|
+        format.js
+      end
     end
   end
 
