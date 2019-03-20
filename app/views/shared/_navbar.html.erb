@@ -2,13 +2,27 @@
   <div class="navbar-content">
     <div class="navbar-kid-genmenu">
       <%= link_to "#", class: "navbar-kid" do %>
-      <img src="http://eduardoin.com/le-wagon/baby-sophia.png" alt="">
-      <h1 class="current-kid-name">Sophia</h1>
+
+      <% if @kid.photo.url %>
+        <%= cl_image_tag @kid.photo %>
+      <% else  %>
+
+        <%= image_tag "fakebaby.svg" %>
+      <% end %>
+
+
+
+
+
+
+
+
+      <h1 class="current-kid-name"><%= @kid ? @kid.name : "pop" %></h1>
       <% end %>
     </div>
 
-    <% if current_user.kids == [] %>
-      <%= link_to 'Add a new kid', new_kid_path, class: 'btn btn-primary' %>
+    <% if current_user.kids == [] || @kid.id == nil %>
+
     <% else %>
       <div class="kid-menu">
         <%= link_to 'tracking', tracking_kid_path(@kid.id), class: current_class?(tracking_kid_path(@kid.id)) %>
