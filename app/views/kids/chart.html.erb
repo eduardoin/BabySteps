@@ -1,4 +1,9 @@
 <%= render 'measurements/modal', kid: @kid, measurement: Height.new %>
 <%= render 'measurements/modal', kid: @kid, measurement: Weight.new %>
-<%= link_to 'Height', '#', data: { target: "#modalHeight", toggle: 'modal' } %>
-<%= link_to 'Weight', '#', data: { target: "#modalWeight", toggle: 'modal' } %>
+
+
+<%= link_to 'Add new height', '#', data: { target: "#modalHeight", toggle: 'modal' } %>
+<%= line_chart [ { data: @heights.map{|height| [height.measured_at, height.value] } } ] %>
+
+<%= link_to 'Add new weight', '#', data: { target: "#modalWeight", toggle: 'modal' } %>
+<%= line_chart [ { data: @weights.map{|weight| [weight.measured_at, weight.value] } } ] %>

@@ -1,6 +1,5 @@
 class KidsController < ApplicationController
-
-  before_action :set_kid, only: %i[index show edit update destroy tracking full_log]
+  before_action :set_kid, only: %i[show edit update destroy tracking full_log]
 
   def index
     @kids = current_user.kids
@@ -53,8 +52,8 @@ class KidsController < ApplicationController
 
   def chart
     @kid = Kid.find(params[:id])
-    @height = @kid.measurements.where(type: 'Height')
-    @weight = @kid.measurements.where(type: 'Weight')
+    @heights = @kid.measurements.where(type: 'Height')
+    @weights = @kid.measurements.where(type: 'Weight')
   end
 
   private
