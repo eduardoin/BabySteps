@@ -2,9 +2,6 @@
   overflow: hidden;
   display: flex;
   padding: 20px 24px;
-  &:hover {
-  background-color: $white;
-  }
 }
 
 .log_card-content{
@@ -123,7 +120,7 @@ h2.log_card-type {
   margin-bottom: 4px;
 }
 
-p.log_card-subtitle {
+p.log_card-subtitle, .log_card-subtitle {
   color: $medium-main;
   font-size: 14px;
   line-height: 1;
@@ -199,4 +196,81 @@ p.log_card-subtitle {
 .bgc-other svg {
   width: 16px;
   margin-bottom: 1px;
+}
+
+@media (min-width: 576px) {
+  .log_card {
+    padding: 20px 0;
+  }
+  .log_card-list:before {
+    left: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .log_card {
+    padding: 24px 40px;
+    border-radius: 8px;
+    margin: 0 60px;
+    &:hover {
+    background-color: #F8F9F9;
+    }
+  }
+  .log_card-list:before {
+    left: 131px;
+  }
+  .log_card-badge {
+    height: 64px;
+    width: 64px;
+    margin-right: 24px;
+  }
+  p.log_card-time {
+    font-size: 14px;
+    letter-spacing: 0.035em;
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
+  h2.log_card-type {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  p.log_card-subtitle, .log_card-subtitle {
+    font-size: 18px;
+    margin: 0;
+  }
+  .bgc-diaper_changing svg {
+    height: 29px;
+    margin-bottom: 0;
+  }
+  .bgc-feeding svg {
+    height: 38px;
+  }
+  .bgc-crying svg {
+    height: 36px;
+    margin-bottom: 0;
+  }
+  .bgc-medication svg {
+    height: 31px;
+    margin-bottom: 0;
+  }
+  .bgc-fever svg {
+    height: 39px;
+    margin-bottom: 3px;
+  }
+  .bgc-vomiting svg {
+    width: 36px;
+  }
+  .bgc-bruise svg {
+    width: 36px;
+  }
+  .bgc-other svg {
+    width: 30px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  ul {
+    // background-color: yellow;
+  }
 }
