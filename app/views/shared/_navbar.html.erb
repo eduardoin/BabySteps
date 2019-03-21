@@ -4,8 +4,9 @@
       <%= link_to "#", class: "navbar-kid" do %>
         <% if controller_name == "kids" && action_name == "new" %>
           <h2>New Profile</h2>
+          <% elsif controller_name == "pages" && action_name == "your_profile" %>
+         <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
         <% elsif @kid ==  nil%>
-          <%= image_tag "fakebaby.svg" %>
         <% elsif @kid.photo.url %>
           <%= cl_image_tag @kid.photo %>
         <% else  %>
