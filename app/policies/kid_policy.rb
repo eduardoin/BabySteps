@@ -5,10 +5,6 @@ class KidPolicy < ApplicationPolicy
     end
   end
 
-  def index?
-    record.users.include?(user)
-  end
-
   def new?
     user
   end

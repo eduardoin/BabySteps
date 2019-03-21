@@ -2,8 +2,7 @@ class KidsController < ApplicationController
   before_action :set_kid, only: %i[show edit update destroy tracking full_log chart]
 
   def index
-    @kids = current_user.kids
-    authorize @kid
+    @kids = policy_scope(Kid)
   end
 
   def show
