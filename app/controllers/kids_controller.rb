@@ -1,5 +1,6 @@
 class KidsController < ApplicationController
-  before_action :set_kid, only: %i[new index show edit update destroy tracking full_log]
+
+  before_action :set_kid, only: %i[index show edit update destroy tracking full_log]
 
   def index
     @kids = current_user.kids
@@ -10,6 +11,7 @@ class KidsController < ApplicationController
 
   def new
     @kid = Kid.new
+    authorize @kid
   end
 
   def create
@@ -42,7 +44,7 @@ class KidsController < ApplicationController
   end
 
   def tracking
-    @episodes = Episode.new_from_types
+    @episodes = policy_scope(Episode).new_from_types
   end
 
   def full_log
@@ -67,5 +69,6 @@ class KidsController < ApplicationController
     else
       @kid = current_user.kids.first
     end
+    authorize @kid
   end
 end
