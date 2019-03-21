@@ -42,12 +42,17 @@ class KidsController < ApplicationController
   end
 
   def tracking
-
     @episodes = Episode.new_from_types
   end
 
   def full_log
     @episodes = @kid.episodes
+  end
+
+  def chart
+    @kid = Kid.find(params[:id])
+    @height = @kid.measurements.where(type: 'height')
+    @weight = @kid.measurements.where(type: 'weight')
   end
 
   private
