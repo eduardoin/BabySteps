@@ -3,36 +3,36 @@
     <i class="fas fa-bars"></i>
   </button>
   <div class="display-fig">
-    <%= svg_tag "babysteps-feeding.svg" %>
+    <%= svg_tag "babysteps-logo-negative.svg" %>
   </div>
 
   <div class="display-links-kids">
-    <% current_user.kids.each do |kid| %>
-     <div>
-      <%= link_to kid.name,  tracking_kid_path(kid), class: "sidebar_kids_link" %>
+    <div class="kid-link-box">
+      <% current_user.kids.each do |kid| %>
+        <%= link_to kid.name,  tracking_kid_path(kid), class: "sidebar_kids_link" %>
+      <% end %>
     </div>
-    <% end %>
   </div>
 
   <div class="display-links">
-    <div>
+    <div class="user-link-box">
       <%= link_to "Your Profile",  pages_your_profile_path, class: "sidebar_actions_link" %>
     </div>
-    <div>
+    <div class="user-link-box">
       <%= link_to "Add a New Kid",  new_kid_path, class: "sidebar_actions_link" %>
     </div>
-    <div>
+    <div class="user-link-box">
       <%= link_to "Send Invitation",  kids_path, class: "sidebar_actions_link" %>
     </div>
   </div>
   <div class="display-links">
-    <div>
+    <div class="bs-link-box">
       <%= link_to "BabySteps Team",  kids_path, class: "sidebar_actions_link" %>
     </div>
-    <div>
+    <div class="bs-link-box">
       <%= link_to "Help",  kids_path, class: "sidebar_actions_link" %>
     </div>
-      <div>
+      <div class="bs-link-box">
       <%= link_to "Log out",  destroy_user_session_path, class: "sidebar_actions_link", method: :delete %>
     </div>
   </div>
