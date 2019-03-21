@@ -1,0 +1,15 @@
+function refreshForm(innerHTML) {
+  const newReviewForm = document.querySelector('#modal<%= @measurement.type %> form');
+  newReviewForm.innerHTML = innerHTML;
+}
+
+<% if @measurement.errors.any? %>
+  refreshForm('<%= j render "measurements/form", kid: @kid, measurement: @measurement %>');
+<% else %>
+  document.querySelector('#modal<%= @measurement.type %> .close').click();
+  window.swal("Added <%= @measurement.type %>!", {
+    buttons: false,
+    timer: 1500,
+    icon: 'success'
+  });
+<% end %>

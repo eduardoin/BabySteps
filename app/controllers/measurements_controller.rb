@@ -1,11 +1,6 @@
 class MeasurementsController < ApplicationController
-  def new
-    @kid = Kid.find(params[:id])
-    @measurement = Measurement.new
-  end
-
   def create
-    @kid = Kid.find(params[:id])
+    @kid = Kid.find(params[:kid_id])
     @measurement = Measurement.new(measurement_params)
     @measurement.kid = @kid
     if @measurement.save

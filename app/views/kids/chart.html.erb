@@ -1,0 +1,4 @@
+<%= render 'measurements/modal', kid: @kid, measurement: Height.new %>
+<%= render 'measurements/modal', kid: @kid, measurement: Weight.new %>
+<%= link_to 'Height', '#', data: { target: "#modalHeight", toggle: 'modal' } %>
+<%= link_to 'Weight', '#', data: { target: "#modalWeight", toggle: 'modal' } %>
