@@ -5,9 +5,9 @@
         <div class="modal-episode-type">
           <div class="modal-draw">
             <div class="modal-string"></div>
-            <div class="modal-medication-badge" >
-              <div class="modal-medication-icon">
-                <%= svg_tag "babysteps-medication.svg" %>
+            <div class=<%= "modal-#{measurement.type}-badge" %>>
+              <div class=<%= "modal-#{measurement.type}-icon"%>>
+                <%= svg_tag "babysteps-#{measurement.type}.svg" %>
               </div>
             </div>
           </div>
