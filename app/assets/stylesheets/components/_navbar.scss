@@ -84,9 +84,23 @@ a.navbar-kid:hover {
   border-bottom: solid 4px rgba(34,51,68,0.1);
 }
 
+@media (min-width: 576px) {
+  .navbar {
+    right: 0;
+  }
+  .navbar-content {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 768px) {
   .navbar {
-    padding: 32px 71px 0 71px;
+    padding: 32px 0 0 0;
+  }
+  .navbar-content {
+    max-width: 720px;
+    margin: 0 auto;
   }
 }
 
@@ -97,7 +111,7 @@ a.navbar-kid:hover {
     padding: 0 55px;
   }
   .navbar-content {
-    // width: 920px;
+    max-width: 960px;
     margin: 0 auto;
     flex-direction: row;
   }
@@ -120,6 +134,12 @@ a.navbar-kid:hover {
 }
 
 @media (min-width: 1200px) {
+  .navbar {
+    padding: 0 40px;
+  }
+  .navbar-content {
+    max-width: 1060px;
+  }
   .kid-menu-item {
     font-size: 18px;
     margin: 0 3.5%;
@@ -131,13 +151,6 @@ a.navbar-kid:hover {
 }
 
 @media (min-width: 1340px) {
-  .navbar {
-    padding: 0 111px;
-  }
-  .navbar-kid-genmenu {
-    position: relative;
-    right: 50px;
-  }
   .kid-menu-item {
     margin: 0 4%;
   }
@@ -148,9 +161,20 @@ a.navbar-kid:hover {
 
 @media (min-width: 1440px) {
   .navbar {
-    padding: 0 159px;
+    padding: 0;
+  }
+  .navbar-content {
+    max-width: 940px;
   }
   .navbar-kid-genmenu {
-    right: 117px;
+    position: relative;
+    right: 116px;
+  }
+}
+
+@media (min-width: 1460px) {
+  .navbar-kid-genmenu {
+    position: relative;
+    right: 116px;
   }
 }

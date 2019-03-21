@@ -1,0 +1,43 @@
+.container {
+  padding: 0;
+}
+.high-res {
+  display: flex;
+  flex-direction: row;
+}
+.high-menu {
+  background-color: $dark-main;
+  width: 200px;
+  height: 100vh;
+}
+.episodes-panel {
+  margin: 240px 24px 0 24px;
+}
+.episodes-list {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 576px) {
+  .episodes-panel {
+    margin: 240px 0 0 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .episodes-list li {
+    display: inline;
+  }
+}
+
+@media (min-width: 992px) {
+  .episodes-panel {
+    margin: 204px 40px 0 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .episodes-panel {
+    margin: 204px 100px 0 100px;
+  }
+}

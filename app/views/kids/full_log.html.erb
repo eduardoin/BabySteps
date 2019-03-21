@@ -1,41 +1,47 @@
-<ul class="list-unstyled">
-  <% @episodes.each do |episode| %>
-    <%= render 'components/update_modal', kid: @kid, episode: episode %>
-    <li>
-      <div class="log_card">
-        <div class='<%= "log_card-badge bgc-#{episode.type.underscore}" %>'>
-         <div class="log_card-icon">
-              <%= svg_tag "babysteps-#{episode.type.underscore}.svg" %>
+<div class="container">
+  <div class="row full-log-page">
+    <div class="col-xs-12 col-xl-8 offset-xl-2"></div>
+    <ul class="list-unstyled">
+      <% @episodes.each do |episode| %>
+        <%= render 'components/update_modal', kid: @kid, episode: episode %>
+        <li>
+          <div class="log_card">
+            <div class='<%= "log_card-badge bgc-#{episode.type.underscore}" %>'>
+             <div class="log_card-icon">
+                  <%= svg_tag "babysteps-#{episode.type.underscore}.svg" %>
+                </div>
             </div>
-        </div>
-        <div class="log_card-content">
-          <div class="log_card-text">
-            <p class="log_card-time"><%= episode.tracked_at.strftime('%b %e %A, %l:%M %p') %></p>
-            <h2 class="log_card-type"><%= episode.title %></h2>
-              <ul class="list-inline">
-                <%= episode.present_log %>
+            <div class="log_card-content">
+              <div class="log_card-text">
+                <p class="log_card-time"><%= episode.tracked_at.strftime('%b %e %A, %l:%M %p') %></p>
+                <h2 class="log_card-type"><%= episode.title %></h2>
+                  <ul class="list-inline">
+                    <%= episode.present_log %>
+                  </ul>
+                <p class="log_card-subtitle"><%= episode.note.capitalize %></p>
+              </div>
+            </div>
+            <div class="btn-group dropleft">
+              <button class="kebab-btn none-outline" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <div class="dropdown-menu kebab-drop">
+
+              <ul class="btn-group dropleft display-ul">
+                <li><%= link_to edit_kid_episode_path(@kid, episode), data: { target: "#modal#{episode.type}", toggle: 'modal' } do%>
+                    Edit
+                  <% end %>
+                </li>
+
+                <li><%= link_to 'Delete', kid_episode_path(episode.kid, episode), method: :delete %></li>
               </ul>
-            <p class="log_card-subtitle"><%= episode.note.capitalize %></p>
+              </div>
+            </div>
+
           </div>
-        </div>
-        <div class="btn-group dropleft">
-          <button class="kebab-btn none-outline" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-ellipsis-v"></i>
-          </button>
-          <div class="dropdown-menu kebab-drop">
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
-          <ul class="btn-group dropleft display-ul">
-            <li><%= link_to edit_kid_episode_path(@kid, episode), data: { target: "#modal#{episode.type}", toggle: 'modal' } do%>
-                Edit
-              <% end %>
-            </li>
-
-            <li><%= link_to 'Delete', kid_episode_path(episode.kid, episode), method: :delete %></li>
-          </ul>
-          </div>
-        </div>
-
-      </div>
-    </li>
-  <% end %>
-</ul>
