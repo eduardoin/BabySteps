@@ -1,11 +1,10 @@
-.log_card{
+.log_card {
   overflow: hidden;
   display: flex;
-  padding: 20px;
+  padding: 20px 24px;
   &:hover {
-  background-color: $light-gray;
+  background-color: $white;
   }
-
 }
 
 .log_card-content{
@@ -26,6 +25,7 @@
 }
 
 .fa-ellipsis-v{
+  font-size: 18px;
   position: absolute;
   top: 0px;
   color: $medium-main;
@@ -34,8 +34,8 @@
   }
 }
 
-li{
-  a{
+li {
+  a {
     color: $medium-main;
     &:hover{
       text-decoration: none;
@@ -49,11 +49,11 @@ li{
   list-style: none;
 }
 
-.kebab-drop{
+.kebab-drop {
   min-width: 8rem;
 }
 
-.none-outline:focus{
+.none-outline:focus {
   box-shadow: none;
   outline: none;
 }
@@ -61,45 +61,43 @@ li{
 .log_card:hover {
   text-decoration: none;
 }
+
 .log_card-badge {
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    width: 1px;
-    background: $light-gray;
-    height: 60px;
-  }
-
-  &:before {
-    top: -100%;
-  }
-
-  &:after {
-    bottom: -100%;
-  }
   position: relative;
   display: flex;
-  flex: 0 0 60px;
+  flex: 0 0 32px;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 16px;
 }
-.log_card-icon svg {
-  height: 24px;
+
+.log_card-list {
+  position: relative;
+
+  &:before {
+    content: '';
+    top: 32px;
+    left: 39px;
+    width: 2px;
+    height: 300vh;
+    background: $line-main;
+    position: absolute;
+  }
+
+  li:first-child {
+    .log_card-badge::before {
+      display: none;
+    }
+  }
 }
+
 .log_card-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-h2.log_card-type {
-  color: $dark-main;
-  font-weight: 600;
-  font-size: 16px;
-  margin: 3px 0 1px 0;
 }
 
 ul.list-inline{
@@ -110,16 +108,27 @@ ul.list-inline{
 
 p.log_card-time {
   color: $medium-main;
-  font-size: 14px;
-  margin: 0;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+  margin-bottom: 4px;
+}
+
+h2.log_card-type {
+  color: $dark-main;
+  font-weight: 600;
+  line-height: 1;
+  font-size: 18px;
+  margin-bottom: 4px;
 }
 
 p.log_card-subtitle {
   color: $medium-main;
   font-size: 14px;
+  line-height: 1;
   margin: 0;
 }
-
 
 .btn-group_dropleft {
    display: flex;
@@ -157,4 +166,37 @@ p.log_card-subtitle {
 
 .bgc-other {
   background-color: $light-other;
+}
+
+.bgc-diaper_changing svg {
+  height: 15px;
+  margin-bottom: 3px;
+}
+.bgc-feeding svg {
+  height: 19px;
+  margin-bottom: 4px;
+}
+.bgc-crying svg {
+  height: 18px;
+  margin-bottom: 4px;
+}
+.bgc-medication svg {
+  height: 17px;
+  margin-bottom: 3px;
+}
+.bgc-fever svg {
+  height: 19px;
+  margin-bottom: 4px;
+}
+.bgc-vomiting svg {
+  width: 18px;
+  margin-top: 1px;
+}
+.bgc-bruise svg {
+  width: 18px;
+  margin-bottom: 1px;
+}
+.bgc-other svg {
+  width: 16px;
+  margin-bottom: 1px;
 }

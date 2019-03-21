@@ -1,15 +1,17 @@
 <div class="container">
   <div class="row full-log-page">
     <div class="col-xs-12 col-xl-8 offset-xl-2"></div>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled log_card-list">
       <% @episodes.each do |episode| %>
-        <%= render 'components/update_modal', kid: @kid, episode: episode %>
         <li>
+          <%= render 'components/update_modal', kid: @kid, episode: episode %>
           <div class="log_card">
-            <div class='<%= "log_card-badge bgc-#{episode.type.underscore}" %>'>
-             <div class="log_card-icon">
+            <div class="line-badge">
+              <div class='<%= "log_card-badge bgc-#{episode.type.underscore}" %>'>
+                <div class="log_card-icon">
                   <%= svg_tag "babysteps-#{episode.type.underscore}.svg" %>
                 </div>
+              </div>
             </div>
             <div class="log_card-content">
               <div class="log_card-text">
