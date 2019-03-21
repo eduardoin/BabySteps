@@ -2,6 +2,8 @@
   <div class="col-12 episodes-list-profile">
         <h1>Username: <%= @user.username %></h1>
         <h1>Email: <%= @user.email %></h1>
+          <%= current_user.kids %>
+          <%= @user.id %>
         <%= link_to "Edit",  edit_user_registration_path, class: "btn btn-flat" %>
         <%= link_to "Return",  "#", class: "btn btn-gradient" %>
   </div>
