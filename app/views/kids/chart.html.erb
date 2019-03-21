@@ -3,7 +3,7 @@
 
 
 <%= link_to 'Add new height', '#', data: { target: "#modalHeight", toggle: 'modal' } %>
-<%= line_chart [ { data: @heights.map{|height| [height.measured_at, height.value] } } ] %>
+<%= line_chart [ { data: @heights.map{|height| [height.measured_at, height.value] } } ], xtitle: "Time", ytitle: "Height", colors: ["#a7d129", "#666"], messages: {empty: "Add some data to see your kid development"}  %>
 
 <%= link_to 'Add new weight', '#', data: { target: "#modalWeight", toggle: 'modal' } %>
-<%= line_chart [ { data: @weights.map{|weight| [weight.measured_at, weight.value] } } ] %>
+<%= line_chart [ { data: @weights.map{|weight| [weight.measured_at, weight.value] } } ], xtitle: "Time", ytitle: "Weight", colors: ["#b00", "#666"], messages: {empty: "Add some data to see your kid development"} %>
