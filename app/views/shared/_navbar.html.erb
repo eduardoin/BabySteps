@@ -13,13 +13,10 @@
             <%= image_tag "babysteps-avatar.svg" %>
           <% end %>
         <h1 class="current-kid-name"><%= @kid ? @kid.name : "" %></h1>
-
         <% end %>
       </div>
 
-      <% if current_user.kids == [] || @kid == nil %>
-
-      <% else %>
+      <% if @kid && @kid.persisted? %>
         <div class="kid-menu">
           <%= link_to 'tracking', tracking_kid_path(@kid.id), class: current_class?(tracking_kid_path(@kid.id)) %>
           <%= link_to 'full log', full_log_kid_path(@kid.id), class: current_class?(full_log_kid_path(@kid.id)) %>
