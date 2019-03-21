@@ -19,6 +19,8 @@ gem 'webpacker', '3.5.5'
 gem 'meta-tags'
 gem 'flatpickr', '~> 4.5', '>= 4.5.2.0'
 
+gem "chartkick"
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
