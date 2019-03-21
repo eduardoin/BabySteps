@@ -7,7 +7,7 @@
             <h2>New Profile</h2>
             <% elsif controller_name == "pages" && action_name == "your_profile" %>
          <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-        
+
           <% elsif @kid ==  nil%>
         <% elsif @kid.photo.url %>
           <%= cl_image_tag @kid.photo %>
@@ -24,7 +24,7 @@
         <div class="kid-menu">
           <%= link_to 'tracking', tracking_kid_path(@kid.id), class: current_class?(tracking_kid_path(@kid.id)) %>
           <%= link_to 'full log', full_log_kid_path(@kid.id), class: current_class?(full_log_kid_path(@kid.id)) %>
-          <a class="kid-menu-item" href="">chart</a>
+          <%= link_to 'chart', chart_kid_path(@kid.id), class: current_class?(chart_kid_path(@kid.id)) %>
           <a class="kid-menu-item" href="">share</a>
         </div>
       <% end %>

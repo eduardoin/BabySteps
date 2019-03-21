@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get 'share'
     end
     resources :episodes, only: [:new, :create, :edit, :update, :destroy]
-    resources :measurements, only: [:new, :create]
+    resources :measurements, only: [:create]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

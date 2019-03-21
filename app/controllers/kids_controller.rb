@@ -51,8 +51,8 @@ class KidsController < ApplicationController
 
   def chart
     @kid = Kid.find(params[:id])
-    @height = @kid.measurements.where(type: 'height')
-    @weight = @kid.measurements.where(type: 'weight')
+    @height = @kid.measurements.where(type: 'Height')
+    @weight = @kid.measurements.where(type: 'Weight')
   end
 
   private

@@ -4,3 +4,9 @@ class Measurement < ApplicationRecord
   validates :type, :measured_at, :value, presence: true
   validates :value, numericality: true
 end
+
+class Height < Measurement
+end
+
+class Weight < Measurement
+end
