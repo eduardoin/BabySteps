@@ -17,7 +17,7 @@ class KidsController < ApplicationController
     @kid.users << current_user
     if @kid.save
       flash[:notice] = "You added #{@kid.name} profile successfully."
-      redirect_to kid_path(@kid)
+      redirect_to tracking_kid_path(@kid)
     else
       render :new
     end
@@ -29,7 +29,7 @@ class KidsController < ApplicationController
   def update
     if @kid.update(kid_params)
       flash[:notice] = "You updated #{@kid.name} profile successfully."
-      redirect_to kid_path(@kid)
+      redirect_to tracking_kid_path(@kid)
     else
       render :show
     end
