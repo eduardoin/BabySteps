@@ -1,5 +1,5 @@
 class KidsController < ApplicationController
-  before_action :set_kid, only: %i[new index show edit update destroy tracking full_log]
+  before_action :set_kid, only: %i[new show edit update destroy tracking full_log]
 
   def index
     @kids = current_user.kids

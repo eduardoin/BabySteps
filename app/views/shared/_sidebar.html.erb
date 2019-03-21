@@ -10,16 +10,19 @@
   <div class="display-links-kids">
     <div class="kid-link-box">
       <% current_user.kids.each do |kid| %>
-        <%= link_to kid.name,  tracking_kid_path(kid), class: "sidebar_kids_link" %>
+        <% is_active = @kid.id == kid.id ? "active" : "" if @kid %>
+        <%= link_to kid.name,  tracking_kid_path(kid), class: "sidebar_kids_link #{is_active}" %>
       <% end %>
     </div>
   </div>
 
   <div class="display-links">
-    <div class="user-link-box">
+    <% is_your_profile = request.original_url.include?("pages/your_profile") ? "active" : "" %>
+    <div class="user-link-box <%= is_your_profile %>">
       <%= link_to "Your Profile",  pages_your_profile_path, class: "sidebar_actions_link" %>
     </div>
-    <div class="user-link-box">
+    <% is_new_kid = request.original_url.include?("kids/new") ? "active" : "" %>
+    <div class="user-link-box <%= is_new_kid %>">
       <%= link_to "Add a New Kid",  new_kid_path, class: "sidebar_actions_link" %>
     </div>
     <div class="user-link-box">

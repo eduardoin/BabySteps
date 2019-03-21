@@ -107,9 +107,9 @@
   text-decoration: none;
   opacity: 1;
 }
-.display-links-kids a:active,
-.user-link-box a:active,
-.bs-link-box a:active {
+a.sidebar_kids_link.active,
+.user-link-box.active a,
+.bs-link-box.active a {
   text-decoration: none;
   opacity: 1;
   background-color: #1B2936;
