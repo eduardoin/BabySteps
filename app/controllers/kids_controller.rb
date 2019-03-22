@@ -16,6 +16,7 @@ class KidsController < ApplicationController
   def create
     @kid = Kid.new(kid_params)
     @kid.users << current_user
+    authorize @kid
     if @kid.save
       flash[:notice] = "You added #{@kid.name} profile successfully."
       redirect_to tracking_kid_path(@kid)
