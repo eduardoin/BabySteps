@@ -2,6 +2,17 @@
   margin-top: 210px;
 }
 
+.chart-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  margin: auto;
+  padding-right: 58px;
+}
+
 .chart-btn-margin {
   margin-bottom: 34px;
 }
