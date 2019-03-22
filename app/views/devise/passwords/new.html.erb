@@ -1,24 +1,32 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <h2>Forgot your password?</h2>
-
-      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-        <%= f.error_notification %>
-
-        <div class="form-inputs">
-          <%= f.input :email,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "email" } %>
+    <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+      <div class="session-card">
+        <div class="session-logo">
+          <%= svg_tag "babysteps-logo.svg" %>
         </div>
+        <div class="session-content">
+          <h1 class="session-title">Forgot your password?</h1 class="session-title">
 
-        <div class="form-actions">
-          <%= f.button :submit, "Send me reset password instructions" %>
+          <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+              <%= f.error_notification %>
+
+              <div class="form-inputs">
+                <%= f.input :email,
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "email" } %>
+              </div>
+
+            <div class="form-actions session-btn">
+              <%= f.button :submit, "Send me instructions" %>
+            </div>
+            <div class="session-options">
+              <%= render "devise/shared/links" %>
+            </div>
+          <% end %>
         </div>
-         <%= render "devise/shared/links" %>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>
-

@@ -1,0 +1,122 @@
+.session-content {
+  margin: 24px;
+}
+.session-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96px;
+  border-bottom: solid 1px $line-main;
+}
+.session-logo svg {
+  width: 160px;
+  margin-bottom: 4px;
+}
+.session-content {
+  margin: 24px 24px 40px 24px;
+}
+.session-title {
+  font-size: 28px;
+  line-height: 1;
+  margin: 0 0 16px 0;
+}
+.session-content .form-control {
+  height: 40px;
+}
+.session-content .form-group {
+  margin: 0 0 16px 0;
+}
+.session-content .form-group:last-child {
+  margin: 0 0 32px 0;
+}
+.session-content .form-check {
+  margin-top: -12px;
+  margin-bottom: -8px;
+}
+.session-content .form-check-input {
+  margin-top: 5px;
+}
+.session-content .form-check-label {
+  margin: 0 !important;
+}
+.session-btn .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  margin: 0 0 24px 0;
+  color: $white;
+  background-color: $dark-main;
+}
+.session-options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-betwen;
+}
+.session-options p, .session-options a {
+  margin: 0 24px 0 0;
+  line-height: 1;
+  color: $dark-main;
+}
+.session-options a {
+  color: $hover-main;
+}
+
+@media (min-width: 576px) {
+  .session-card {
+    margin: 56px 10% 40px 10%;
+    padding: 0 !important;
+    border: solid 1px $line-main;
+    border-radius: 8px;
+    background-color: $white;
+  }
+  .session-content {
+    margin: 24px 10% 40px 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .session-content {
+    margin: 24px 10% 40px 10%;
+  }
+  .session-title {
+    margin: 0 0 24px 0;
+  }
+  .session-content .form-control {
+    height: 48px;
+  }
+  .session-content .form-group {
+    margin: 0 0 32px 0;
+  }
+  .session-content .form-group:last-child {
+    margin: 0 0 40px 0;
+  }
+  .session-btn .btn {
+    margin: 0 0 32px 0;
+  }
+  .session-btn .btn:hover {
+    background-color: $hover-main;
+  }
+  .session-options {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-betwen;
+  }
+  .session-options p, .session-options a {
+    margin: 0 24px 0 0;
+    line-height: 1;
+    color: $dark-main;
+  }
+  .session-options a {
+    color: $hover-main;
+  }
+}
