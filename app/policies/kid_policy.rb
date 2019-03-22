@@ -9,6 +9,14 @@ class KidPolicy < ApplicationPolicy
     user
   end
 
+  def update?
+    record.users.include?(user)
+  end
+
+  def destroy?
+    record.users.include?(user)
+  end
+
   def tracking?
     record.users.include?(user)
   end
