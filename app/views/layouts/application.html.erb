@@ -11,7 +11,7 @@
     <%= javascript_include_tag 'application' %>
   </head>
   <body>
-    <% exclude_navbar_from_views = ['sessions', 'passwords', 'registrations'] %>
+    <% exclude_navbar_from_views = ['sessions', 'passwords', 'registrations', 'pages'] %>
     <% if exclude_navbar_from_views.include?(controller_name) %>
       <%= yield %>
     <% else %>

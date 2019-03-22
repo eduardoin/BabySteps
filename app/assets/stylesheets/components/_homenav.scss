@@ -1,0 +1,40 @@
+.homenav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px #ddd;
+  height: 100px;
+  padding: 0px 48px;
+  color: #bbb;
+  flex-shrink: 0;
+}
+.homenav-links {
+  display: flex;
+  align-items: center;
+}
+.homenav-links a {
+  color: #CCC !important;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.homenav-links a:hover {
+  color: #AAA !important;
+}
+// .content {
+//   flex: 1 0 auto;
+// }
+
+html, body {
+  height: 100%;
+}
+body {
+  // display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.homenav {
+  flex-shrink: 0;
+}
