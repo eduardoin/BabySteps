@@ -2,12 +2,14 @@ class EpisodesController < ApplicationController
   def new
     @kid = Kid.find(params[:kid_id])
     @episode = Episode.new(type: params[:type])
+    authorize @kid
   end
 
   def create
     @kid = Kid.find(params[:kid_id])
     @episode = Episode.new(episode_params)
     @episode.kid = @kid
+    authorize @kid
     if @episode.save
       respond_to do |format|
         format.html { redirect_to tracking_kid_path(@kid) }
@@ -23,6 +25,7 @@ class EpisodesController < ApplicationController
   def edit
     @episode = Episode.find(params[:id])
     @kid = Kid.find(params[:kid_id])
+    authorize @kid
   end
 
   def update
