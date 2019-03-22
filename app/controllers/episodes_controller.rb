@@ -28,6 +28,7 @@ class EpisodesController < ApplicationController
   def update
     @episode = Episode.find(params[:id])
     @kid = Kid.find(params[:kid_id])
+    authorize @kid
     if @episode.update(episode_params)
       respond_to do |format|
         format.html { redirect_to full_log_kid_path(@kid) }
@@ -43,6 +44,7 @@ class EpisodesController < ApplicationController
   def destroy
     @episode = Episode.find(params[:id])
     @kid = Kid.find(params[:kid_id])
+    authorize @kid
     @episode.destroy
     flash[:notice] = "You deleted #{@episode.title} episode to your #{@kid.name} profile successfully."
     redirect_to full_log_kid_path(@kid)
