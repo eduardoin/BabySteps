@@ -29,6 +29,7 @@ class KidsController < ApplicationController
   end
 
   def update
+    authorize @kid
     if @kid.update(kid_params)
       flash[:notice] = "You updated #{@kid.name} profile successfully."
       redirect_to tracking_kid_path(@kid)
@@ -38,12 +39,14 @@ class KidsController < ApplicationController
   end
 
   def destroy
+    authorize @kid
     @kid.destroy
     flash[:notice] = "You deleted #{@kid.name} profile successfully."
     redirect_to kids_path
   end
 
   def tracking
+    authorize @kid
     @episodes = policy_scope(Episode).new_from_types
   end
 

@@ -3,6 +3,7 @@ class MeasurementsController < ApplicationController
     @kid = Kid.find(params[:kid_id])
     @measurement = Measurement.new(measurement_params)
     @measurement.kid = @kid
+    authorize @kid
     if @measurement.save
       respond_to do |format|
         format.html { redirect_to chart_kid_path(@kid) }
