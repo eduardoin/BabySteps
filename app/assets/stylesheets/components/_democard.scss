@@ -1,0 +1,458 @@
+//CARD CARD:HOVER BADGE ICON
+//BRUISE
+.bruise-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+
+.bruise-card-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $white;
+  margin-right: 20px;
+}
+.bruise-card-icon svg {
+  width: 28px;
+}
+
+
+//CRYING
+.crying-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.crying-card-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $white;
+  margin-right: 20px;
+}
+.crying-card-icon svg {
+  width: 28px;
+}
+
+
+//DIAPER CHANGING
+.diaper_changing-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.diaper_changing-card-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $white;
+  margin-right: 20px;
+}
+.diaper_changing-card-icon svg {
+  width: 26px;
+  margin-top: 2px;
+}
+
+
+//FEEDING
+.feeding-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.feeding-card-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $white;
+  margin-right: 20px;
+}
+.feeding-card-icon svg {
+  height: 28px;
+}
+
+
+//FEVER
+.fever-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.fever-card-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $white;
+  margin-right: 20px;
+}
+.fever-card-icon svg {
+  height: 28px;
+}
+
+
+//MEDICATION
+.medication-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.medication-card-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $white;
+  margin-right: 20px;
+}
+.medication-card-icon svg {
+  width: 20px;
+}
+
+
+//OTHER
+.other-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.other-card-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $white;
+  margin-right: 20px;
+}
+.other-card-icon svg {
+  width: 24px;
+}
+
+
+//VOMITING
+.vomiting-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.vomiting-card-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $white;
+  margin-right: 20px;
+}
+.vomiting-card-icon svg {
+  width: 28px;
+  margin-top: 2px;
+}
+
+
+//GENERAL
+.episode-card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+h2.episode-card-type {
+  color: $dark-main;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 3px 0 1px 0;
+}
+p.episode-card-subtitle {
+  color: $medium-main;
+  font-size: 14px;
+  margin: 0;
+}
+
+
+@media (min-width: 768px) {
+  //DESKTOP CARD CARD:HOVER BADGE ICON
+  //BRUISE
+  .bruise-card {
+    border: solid 1px $line-main;
+    border-radius: 8px;
+    background-color: $light-bruise;
+    padding: 31px 23px 0 23px;
+    width: 100%;
+    height: 248px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0);
+    transition: border 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+      .bruise-card-badge {
+      background-color: $white;
+    }
+  }
+  .bruise-card-badge {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 18px;
+    transition: background-color 0.5s ease;
+  }
+
+  .bruise-card-icon svg {
+    width: 44px;
+  }
+
+
+  //CRYING
+  .crying-card {
+    border: solid 1px $line-main;
+    border-radius: 8px;
+    background-color: $light-crying;
+    padding: 31px 23px 0 23px;
+    width: 100%;
+    height: 248px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0);
+    transition: border 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+      .crying-card-badge {
+      background-color: $white;
+    }
+  }
+  .crying-card-badge {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 18px;
+    transition: background-color 0.5s ease;
+  }
+
+  .crying-card-icon svg {
+    width: 44px;
+  }
+
+
+  //DIAPER CHANGING
+ .diaper_changing-card {
+    border: solid 1px $line-main;
+    border-radius: 8px;
+    background-color: $light-diaper;
+    padding: 31px 23px 0 23px;
+    width: 100%;
+    height: 248px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0);
+    transition: border 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+      .diaper_changing-card-badge {
+      background-color: $white;
+    }
+  }
+
+  .diaper_changing-card-badge {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 18px;
+    transition: background-color 0.5s ease;
+  }
+
+  .diaper_changing-card-icon svg {
+    width: 42px;
+  }
+
+
+  //FEEDING
+  .feeding-card {
+    border: solid 1px $line-main;
+    border-radius: 8px;
+    background-color: $light-feeding;
+    padding: 31px 23px 0 23px;
+    width: 100%;
+    height: 248px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0);
+    transition: border 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+    .feeding-card-badge {
+      background-color: $white;
+    }
+  }
+
+
+  .feeding-card-badge {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 18px;
+    transition: background-color 0.5s ease;
+  }
+
+  .feeding-card-icon svg {
+    height: 44px;
+  }
+
+
+  //FEVER
+  .fever-card {
+    border: solid 1px $line-main;
+    border-radius: 8px;
+    background-color: $light-fever;
+    padding: 31px 23px 0 23px;
+    width: 100%;
+    height: 248px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0);
+    transition: border 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+    .fever-card-badge {
+      background-color: $white;
+    }
+  }
+
+
+  .fever-card-badge {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 18px;
+    transition: background-color 0.5s ease;
+  }
+
+  .fever-card-icon svg {
+    height: 46px;
+  }
+
+
+  //MEDICATION
+  .medication-card {
+    border: solid 1px $line-main;
+    border-radius: 8px;
+    background-color: $light-medication;
+    padding: 31px 23px 0 23px;
+    width: 100%;
+    height: 248px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0);
+    transition: border 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+
+      .medication-card-badge {
+      background-color: $white;
+    }
+  }
+
+  .medication-card-badge {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 18px;
+    transition: background-color 0.5s ease;
+    .medication-card-icon svg {
+      width: 32px;
+    }
+  }
+
+  //OTHER
+  .other-card {
+    border: solid 1px $line-main;
+    border-radius: 8px;
+    background-color: $light-other;
+    padding: 31px 23px 0 23px;
+    width: 100%;
+    height: 248px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0);
+    transition: border 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+      .other-card-badge {
+      background-color: $white;
+    }
+  }
+  .other-card-badge {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 18px;
+    transition: background-color 0.5s ease;
+  }
+
+  .other-card-icon svg {
+    width: 40px;
+  }
+  .episode-card-text {
+    align-items: center;
+  }
+
+
+  //VOMITING
+  .vomiting-card {
+    border: solid 1px $line-main;
+    border-radius: 8px;
+    background-color: $light-vomiting;
+    padding: 31px 23px 0 23px;
+    width: 100%;
+    height: 248px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0);
+    transition: border 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+      .vomiting-card-badge {
+      background-color: $white;
+    }
+  }
+  .vomiting-card-badge {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 18px;
+    transition: background-color 0.5s ease;
+  }
+
+  .vomiting-card-icon svg {
+    width: 44px;
+  }
+
+
+//GENERAL
+  .episode-card-text {
+    align-items: center;
+  }
+  h2.episode-card-type {
+    font-size: 24px;
+    letter-spacing: -0.035em;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  p.episode-card-subtitle {
+    font-size: 16px;
+    letter-spacing: -0.035em;
+    text-align: center;
+    line-height: 1.15;
+  }
+}
