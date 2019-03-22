@@ -39,7 +39,7 @@
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-  .banner-content h1, h2 {
+  .banner-content h1, .banner-content h2 {
     text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     font-weight: 300;
   }
