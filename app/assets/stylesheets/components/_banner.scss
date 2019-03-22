@@ -1,7 +1,7 @@
 .banner {
   background: no-repeat center;
   background-size: cover;
-  height: 70vh;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +22,17 @@
 .banner-content h2 {
   margin: 0 0 40px;
 }
+
+.hommie {
+  color: $white;
+  background-color: $dark-main;
+
+  &:hover {
+    color: $white;
+    background-color: $hover-main;
+  }
+}
+
 
 @media only screen
   and (min-device-width: 375px)

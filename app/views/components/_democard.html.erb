@@ -1,11 +1,11 @@
-<div class=<%= "#{episode.type.underscore}-card" %>>
-  <div class= <%= "#{episode.type.underscore}-card-badge" %>>
-    <div class= <%= "#{episode.type.underscore}-card-icon" %>>
+<div class=<%= "#{episode.type.underscore}-democard" %>>
+  <div class= <%= "#{episode.type.underscore}-democard-badge" %>>
+    <div class= <%= "#{episode.type.underscore}-democard-icon" %>>
       <%= svg_tag "babysteps-#{episode.type.underscore}.svg" %>
     </div>
   </div>
-  <div class="episode-card-text">
-    <h2 class="episode-card-type"><%= episode.title %></h2>
-    <p class="episode-card-subtitle"><%= episode.description(episode.title) %></p>
+  <div class="episode-democard-text">
+    <h2 class="episode-democard-type"><%= episode.title %></h2>
+    <p class="episode-democard-subtitle"><%= episode.description(episode.title) %></p>
   </div>
 </div>

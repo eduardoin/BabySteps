@@ -7,6 +7,13 @@
   padding: 0px 48px;
   color: #bbb;
   flex-shrink: 0;
+
+  .navbar-brand {
+    width: 180px;
+  }
+  svg {
+    max-width: 100%;
+  }
 }
 .homenav-links {
   display: flex;
@@ -28,7 +35,4 @@
 
 .content {
   flex: 1 0 auto;
-}
-.homenav {
-  flex-shrink: 0;
 }
