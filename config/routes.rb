@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'pages/sidebar', to: 'pages#sidebar'
   get 'pages/your_profile', to: 'pages#your_profile'
+  get 'pages/about', to: 'pages#about'
+  get 'pages/help', to: 'pages#help'
   resources :kids do
     member do
       get 'tracking'
