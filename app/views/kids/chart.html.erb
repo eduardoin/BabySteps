@@ -2,9 +2,14 @@
 <%= render 'measurements/modal', kid: @kid, measurement: Weight.new %>
 
 <div class="container">
-  <%= line_chart [ { data: @heights.map{|height| [height.measured_at, height.value] } } ], xtitle: "Time", ytitle: "Height", colors: ["#FF525D", "#666"], messages: {empty: "Add some data to see your kid development"}  %>
-  <%= link_to 'Add new height', '#', data: { target: "#modalHeight", toggle: 'modal' } %>
-
-  <%= line_chart [ { data: @weights.map{|weight| [weight.measured_at, weight.value] } } ], xtitle: "Time", ytitle: "Weight", colors: ["#7396FF", "#666"], messages: {empty: "Add some data to see your kid development"} %>
-  <%= link_to 'Add new weight', '#', data: { target: "#modalWeight", toggle: 'modal' } %>
+  <div class="chart">
+    <%= line_chart [ { data: @heights.map{|height| [height.measured_at, height.value] } } ], xtitle: "Time", ytitle: "Height", colors: ["#FF525D", "#666"], messages: {empty: "Add some data to see your kid development"} %>
+    <div class="chart-btn-margin">
+      <%= link_to 'Add new height', '#', data: { target: "#modalHeight", toggle: 'modal' }, class: 'btn btn-chart btn-height' %>
+    </div>
+    <%= line_chart [ { data: @weights.map{|weight| [weight.measured_at, weight.value] } } ], xtitle: "Time", ytitle: "Weight", colors: ["#7396FF", "#666"], messages: {empty: "Add some data to see your kid development"} %>
+    <div class="chart-btn-margin">
+      <%= link_to 'Add new weight', '#', data: { target: "#modalWeight", toggle: 'modal' }, class: 'btn btn-chart btn-weight' %>
+    </div>
+  </div>
 </div>

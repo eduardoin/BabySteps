@@ -1,0 +1,37 @@
+.chart {
+  margin-top: 210px;
+}
+
+.chart-btn-margin {
+  margin-bottom: 34px;
+}
+//HEIGHT BUTTON
+.btn-height{
+  color: $dark-main;
+  background-color: $dark-height;
+}
+.btn-height:hover {
+  text-decoration: none;
+  background-color: $hover-height;
+}
+//WEIGHT BUTTON
+.btn-weight{
+  color: $dark-main;
+  background-color: $dark-weight;
+}
+.btn-weight:hover {
+  text-decoration: none;
+  background-color: $hover-weight;
+}
+
+.btn-chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 46px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  margin: auto;
+}
