@@ -16,17 +16,17 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password])
   end
 
-  def after_sign_in_path_for(_resource)
-    if current_user.kids.empty?
-      new_kid_path
-    else
-      tracking_kid_path(current_user.kids.first)
-    end
+  def after_sign_in_path_for(user)
+    user.kids.empty? ? new_kid_path : tracking_kid_path(last_active_kid)
   end
 
   private
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
+  end
+
+  def last_active_kid
+    current_user.kids.joins(:episodes).order('episodes.tracked_at DESC').first
   end
 end
