@@ -21,13 +21,13 @@
     <div class="user-link-box <%= is_your_profile %>">
       <%= link_to "Your Profile",  pages_your_profile_path, class: "sidebar_actions_link" %>
     </div>
-    <% is_child_list = (request.original_url.include?("kids") && !request.original_url.include?("kids/new")) ? "active" : "" %>
+    <% is_child_list = (request.original_url.include?("kids/index") && !request.original_url.include?("kids/new")) ? "active" : "" %>
     <div class="user-link-box <%= is_child_list %>">
       <%= link_to "Your Child’s List",  kids_path, class: "sidebar_actions_link" %>
     </div>
-    <% is_new_kid = request.original_url.include?("kids/new") ? "active" : "" %>
+    <% is_new_kid = request.original_url.include?("kids") ? "active" : "" %>
     <div class="user-link-box <%= is_new_kid %>">
-      <%= link_to "Add a New Kid",  new_kid_path, class: "sidebar_actions_link" %>
+      <%= link_to "Add a New Child",  new_kid_path, class: "sidebar_actions_link" %>
     </div>
     <div class="user-link-box">
       <%= link_to "Send Invitation",  kids_path, class: "sidebar_actions_link" %>

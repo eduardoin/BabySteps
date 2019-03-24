@@ -1,10 +1,16 @@
 <div class="wrapper">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url(<%= asset_url('babysfeet.jpg') %>);">
-    <div class="banner-content">
-      <h1>Trying to keep track of your child's medical events? <br> It is important! </h1>
-        <br>
-      <%= link_to "Try it for FREE!", new_user_registration_path, class: 'btn btn-lg hommie'  %>
-       <h1>we got you!</h1>
+  <div class="banner">
+    <div class="container inside-banner">
+      <%= render 'components/homenav' %>
+      <div class="row banner-row">
+        <div class="col-12 col-sm-8 col-lg-6 banner-content-box">
+          <div class="banner-content">
+            <h1 class="banner-title">Tracking is caring.</h1>
+            <p class="banner-subtitle">BabySteps is an app for logging your child's routine in an easy way.</p>
+            <%= link_to "Get Started – It’s Free", new_user_registration_path, class: 'banner-btn'  %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

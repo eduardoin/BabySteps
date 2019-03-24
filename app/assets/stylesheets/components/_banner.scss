@@ -1,56 +1,123 @@
 .banner {
-  background: no-repeat center;
+  background: url(http://eduardoin.com/le-wagon/babysteps-banner.jpg) no-repeat center;
   background-size: cover;
-  min-height: 70vh;
+  background-position-x: 88%;
+  min-height: 75vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.inside-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 40px;
+}
+.banner-row {
+  padding: 0 9px;
+  width: 100%;
 }
 .banner-content {
+  text-align: left;
+  margin-top: 220px;
+}
+h1.banner-title {
+  font-size: 46px;
+  font-weight: 100;
   color: white;
-  text-align: center;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+  text-shadow: 0 0 8px rgba(0,0,0,0.2);
+  margin: 0 0 20px 0;
 }
-.banner-content h1, .banner-content h2 {
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  font-weight: 300;
+p.banner-subtitle {
+  font-size: 24px;
+  color: white;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+  text-shadow: 0 0 8px rgba(0,0,0,0.75);
+  margin: 0 0 32px 0;
 }
-.banner-content h1 {
-  margin-top: 40px;
-  margin-bottom: 40px;
+a.banner-btn {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: $dark-main;
+  letter-spacing: -0.025em;
+  padding: 20px 40px;
+  background-color: $white;
+  border-radius: 8px;
+  transition: color 0.5s ease, background-color 0.5s ease;
 }
-.banner-content h2 {
-  margin: 0 0 40px;
-}
-
-.hommie {
+a.banner-btn:hover {
+  text-decoration: none;
   color: $white;
-  background-color: $dark-main;
+  background-color: $hover-main;
+}
 
-  &:hover {
-    color: $white;
-    background-color: $hover-main;
+@media (min-width: 576px) {
+  .inside-banner {
+    padding-bottom: 56px;
+  }
+  .banner-row {
+    padding: 0;
+    margin: 0;
+  }
+  .banner-content-box {
+    padding: 0;
   }
 }
 
-
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-  .banner-content h1, .banner-content h2 {
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    font-weight: 300;
+@media (min-width: 768px) {
+  .banner {
+    background-position-x: 100%;
   }
-  .banner-content h1 {
-    margin-top: 40px;
-    font-size: 32px;
+  .inside-banner {
+   padding-bottom: 80px;
   }
-  .banner-content h2 {
+  .banner-content {
+    margin-top: 160px;
+  }
+}
+
+@media (min-width: 992px) {
+  .inside-banner {
+    padding-bottom: 120px;
+  }
+  .banner-content {
+    margin-top: 144px;
+  }
+  h1.banner-title {
+    font-size: 64px;
+    margin: 0 0 24px 0;
+  }
+  p.banner-subtitle {
+    font-size: 30px;
+    margin: 0 0 40px 0;
+  }
+  a.banner-btn {
     font-size: 24px;
+    padding: 20px 48px;
   }
-  .btn-lg {
-    font-size: 18px;
+}
+
+@media (min-width: 1200px) {
+  .banner {
+    min-height: 90vh;
+  }
+  .inside-banner {
+    padding-bottom: 184px;
+  }
+  .banner-content {
+    margin-top: 200px;
+  }
+  h1.banner-title {
+    font-size: 72px;
+    margin: 0 0 32px 0;
+  }
+  p.banner-subtitle {
+    font-size: 36px;
+    margin: 0 0 48px 0;
   }
 }
