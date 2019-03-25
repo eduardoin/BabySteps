@@ -1,10 +1,30 @@
-<div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+<div class="wrapper footer-wrapper">
+  <div class="container footer-container">
+    <div class="footer-logo">
+      <%= svg_tag "babysteps-logo-negative.svg" %>
     </div>
-    <div class="footer-copyright">
-      Tracking is caring.
+    <div class="footer-links">
+
+      <div class="footer-link-item footer-link-help"><i class="far fa-life-ring"></i>
+        <%= link_to "Help",  pages_help_path %>
+      </div>
+
+      <div class="footer-link-item footer-link-team"><i class="fas fa-user-friends"></i>
+        <%= link_to "BabySteps Team",  pages_about_path %>
+      </div>
+
+      <div class="footer-link-item footer-link-facebook"><i class="fab fa-facebook"></i>
+        <a href="https://www.facebook.com/babystepsapp/" target="_blank">Facebook</a>
+      </div>
+
+      <div class="footer-link-item footer-link-twitter"><i class="fab fa-twitter"></i>
+        <a href="https://twitter.com/babystepstech" target="_blank">Twitter</a>
+      </div>
+
+      <div class="footer-link-item footer-link-email"><i class="fas fa-envelope"></i>
+        <a href="mailto:babysteps.tracking@gmail.com" target="_blank">Email</a>
+      </div>
+
     </div>
   </div>
+</div>
