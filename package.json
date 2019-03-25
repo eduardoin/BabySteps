@@ -10,6 +10,7 @@
     "sweetalert": "^2.1.2"
   },
   "devDependencies": {
+    "ngrok": "^3.1.1",
     "webpack-dev-server": "2.11.2"
   }
 }
