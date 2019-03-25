@@ -8,9 +8,9 @@ window.swal = swal;
 
 initDrawer();
 
-$('.clipboard-btn').tooltip({
+$('.btn-share').tooltip({
   trigger: 'click',
-  placement: 'bottom'
+  placement: 'top'
 });
 
 function setTooltip(btn, message) {
@@ -20,21 +20,19 @@ function setTooltip(btn, message) {
 }
 
 function hideTooltip(btn) {
-  setTimeout(function() {
-    $(btn).tooltip('hide');
-  }, 1000);
+  $(btn).tooltip('hide');
 }
 
 // Clipboard
 
-var clipboard = new Clipboard('.clipboard-btn');
+var clipboard = new Clipboard('.btn-share');
 
 clipboard.on('success', function(e) {
   setTooltip(e.trigger, 'Copied!');
-  hideTooltip(e.trigger);
+  setTimeout(_ => hideTooltip(e.trigger), 1000)
 });
 
 clipboard.on('error', function(e) {
   setTooltip(e.trigger, 'Failed!');
-  hideTooltip(e.trigger);
+  setTimeout(_ => hideTooltip(e.trigger), 1000)
 });
