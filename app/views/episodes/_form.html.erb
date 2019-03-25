@@ -1,6 +1,6 @@
 <%= simple_form_for [kid, episode], remote: true, url: kid_episodes_path(kid), as: 'episode' do |form| %>
   <div class="modal-body modal-<%=episode.type.underscore%>">
-    <%= form.input :tracked_at, label: false, html5: true, input_html: { value: (Time.now - 3.hours).strftime("%Y-%m-%dT%H:%M") } %>
+    <%= form.input :tracked_at, label: false, html5: true, input_html: { value: (Time.now - 3.hours).strftime("%Y-%m-%dT%H:%M"), id: "flatpickr-input" , class: "flatpickr-input" } %>
     <%= render "episodes/#{episode.type.underscore}_inputs", form: form %>
     <%= form.input :type, as: :hidden, value: episode.type %>
     <%= form.input :note, as: :text %>
