@@ -6,12 +6,13 @@ Rails.application.routes.draw do
   get 'pages/your_profile', to: 'pages#your_profile'
   get 'pages/about', to: 'pages#about'
   get 'pages/help', to: 'pages#help'
+  get 'share/:token', to: 'kids#share', as: 'share'
   resources :kids do
     member do
       get 'tracking'
       get 'full_log'
       get 'chart'
-      get 'share'
+      #get 'share'
     end
     resources :episodes, only: [:new, :create, :edit, :update, :destroy]
     resources :measurements, only: [:create]

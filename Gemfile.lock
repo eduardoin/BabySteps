@@ -57,6 +57,7 @@ GEM
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
     chartkick (3.0.2)
+    clipboard-rails (1.7.1)
     cloudinary (1.11.1)
       aws_cf_signer
       rest-client
@@ -227,6 +228,7 @@ DEPENDENCIES
   bootsnap
   carrierwave (~> 1.2)
   chartkick
+  clipboard-rails
   cloudinary
   devise
   dotenv-rails

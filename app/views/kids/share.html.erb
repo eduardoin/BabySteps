@@ -1,0 +1,36 @@
+<% if @episodes == [] %>
+  <div class="container">
+    <h1>Your <%= @kid.name %> does not have any episode</h1>
+  </div>
+<% else %>
+  <div class="container">
+    <div class="row full-log-page">
+      <div class="col-xs-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+      <ul class="list-unstyled log_card-list">
+        <% @episodes.each do |episode| %>
+          <li>
+            <div class="log_card">
+              <div class="line-badge">
+                <div class='<%= "log_card-badge bgc-#{episode.type.underscore}" %>'>
+                  <div class="log_card-icon">
+                    <%= svg_tag "babysteps-#{episode.type.underscore}.svg" %>
+                  </div>
+                </div>
+              </div>
+              <div class="log_card-content">
+                <div class="log_card-text">
+                  <p class="log_card-time"><%= episode.tracked_at.strftime('%b %e %A, %l:%M %p') %></p>
+                  <h2 class="log_card-type"><%= episode.title %></h2>
+                    <ul class="list-inline">
+                      <%= episode.present_log %>
+                    </ul>
+                  <p class="log_card-subtitle"><%= episode.note.capitalize %></p>
+                </div>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>

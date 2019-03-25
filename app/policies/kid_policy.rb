@@ -32,4 +32,8 @@ class KidPolicy < ApplicationPolicy
   def chart?
     record.users.include?(user)
   end
+
+  def share?
+    true
+  end
 end

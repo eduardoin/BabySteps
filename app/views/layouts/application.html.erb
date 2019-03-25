@@ -14,7 +14,7 @@
   </head>
   <body>
     <% exclude_navbar_from_views = ['sessions', 'passwords', 'registrations'] %>
-    <% if exclude_navbar_from_views.include?(controller_name) || controller.action_name == "home" %>
+    <% if exclude_navbar_from_views.include?(controller_name) || controller.action_name == "home" || controller.action_name == "share" %>
       <%= yield %>
     <% else %>
       <div class="container-sidebar">
