@@ -1,0 +1,134 @@
+.hospital-wrapper {
+  background: url(http://eduardoin.com/le-wagon/babysteps-hospital.jpg) no-repeat center center;
+  background-size: cover;
+}
+.hospital-container {
+  padding: 48px 24px 80px 24px;
+}
+h2.hospital-title {
+  text-align: center;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  max-width: 336px;
+  margin: 0 auto;
+}
+.hospital-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hospital-badge-doctor,
+.hospital-badge-timeline,
+.hospital-badge-chart {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 32px;
+}
+.hospital-badge-doctor {
+  background-color: $light-medication;
+}
+.hospital-badge-timeline {
+  background-color: $light-vomiting;
+}
+.hospital-badge-chart {
+  background-color: $light-crying;
+}
+.hospital-badge-doctor svg {
+  height: 34px;
+  margin-bottom: 5px;
+}
+.hospital-badge-timeline svg {
+  height: 39px;
+  margin-top: 2px;
+}
+.hospital-badge-chart svg {
+  height: 29px;
+}
+.hospital-card {
+  background-color: $white;
+  padding: 48px 40px 32px 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(34,51,68,0.15);
+  text-align: center;
+}
+h3.hospital-topic {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  margin-bottom: 16px;
+}
+p.hospital-description {
+  max-width: 296px;
+  margin: 0 auto;
+  color: $medium-main;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+
+@media (min-width: 576px) {
+  .hospital-container {
+    padding: 48px 15px 80px 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  h2.hospital-title {
+    font-size: 40px;
+    max-width: 424px;
+  }
+  h3.hospital-topic {
+    margin-bottom: 24px;
+  }
+  p.hospital-description {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 992px) {
+  .hospital-badge-doctor,
+  .hospital-badge-timeline,
+  .hospital-badge-chart {
+    width: 100px;
+    height: 100px;
+    top: 50px;
+  }
+  .hospital-badge-doctor svg {
+    height: 54px;
+    margin-bottom: 10px;
+  }
+  .hospital-badge-timeline svg {
+    height: 61px;
+    margin-top: 0;
+  }
+  .hospital-badge-chart svg {
+    height: 45px;
+    margin-bottom: 2px;
+  }
+  .hospital-card {
+    padding: 74px 40px 32px 40px;
+    min-height: 254px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hospital-container {
+    padding: 80px 15px 120px 15px;
+  }
+  .hospital-card {
+    min-height: 230px;
+  }
+  h2.hospital-title {
+    font-size: 48px;
+    max-width: 520px;
+  }
+}
