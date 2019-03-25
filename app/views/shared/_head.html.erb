@@ -1,15 +1,17 @@
 <%# Apple tags %>
-<%#= tag.meta(name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent') %>
+<%= tag.meta(name: 'apple-mobile-web-app-status-bar-style', content: 'default') %>
 <%= tag.meta(name: 'apple-mobile-web-app-capable', content: 'yes') %>
 <%= tag.meta(name: 'apple-mobile-web-app-title', content: 'BabySteps') %>
 <%# Icons %>
 <%#= tag.link(rel: 'apple-touch-icon', href: asset_path('icons/Babysteps-96x96.png')) %>
 <%#= tag.link(rel: 'apple-touch-icon', sizes: '152x152', href: asset_path('icons/BabySteps-152x152.png')) %>
-<%#= tag.link(rel: 'apple-touch-icon', sizes: '180x180', href: asset_path('icons/BabySteps-180x180.png')) %>
-<%= tag.link(rel: 'apple-touch-icon', sizes: '192x192', href: asset_path('icons/BabySteps-192x192.png')) %>
+<%#= tag.link(rel: 'apple-touch-icon', sizes: '180x180', href: asset_path('icons/iphone -60x60@3x.png')) %>
+<%= tag.link(rel: 'apple-touch-icon', sizes: '192x192', href: asset_path('icons/Icon-babysteps.png')) %>
 <%# Splashes %>
-<%#= tag.link(rel: "apple-touch-startup-image", href: asset_path('splashes/splash-1x-768x1024.png' ), media: "(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait)") %>
-<%#= tag.link(rel: "apple-touch-startup-image", href: asset_path('splashes/splash-2x-640x1136.png' ), media: "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)") %>
+<%#= tag.link(rel: "apple-touch-startup-image", href: asset_path('splashes/ipad -Portrait~ipad_768x1024.png' ), media: "(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait)") %>
+
+<%= tag.link(rel: "apple-touch-startup-image", href: asset_path('splashes/splash-babysteps.png' ), media: "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)") %>
+
 <%#= tag.link(rel: "apple-touch-startup-image", href: asset_path('splashes/splash-2x-750x1334.png' ), media: "(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)") %>
 <%#= tag.link(rel: "apple-touch-startup-image", href: asset_path('splashes/splash-2x-1536x2008.png'), media: "(min-device-width: 768px) and (max-device-width: 1004px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)") %>
 <%#= tag.link(rel: "apple-touch-startup-image", href: asset_path('splashes/splash-2x-1536x2048.png'), media: "(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)") %>
