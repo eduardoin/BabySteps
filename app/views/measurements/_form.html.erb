@@ -2,7 +2,7 @@
   <div class="modal-body modal-#{measurement.type}">
     <%= form.input :measured_at, label: false, html5: true, input_html: { value: (Time.now - 3.hours).strftime("%Y-%m-%dT%H:%M") } %>
     <%= form.input :type, as: :hidden, value: measurement.type %>
-    <%= form.input :value %>
+    <%= form.input :value, label: "Value #{measurement.measurement_suffix}" %>
   </div>
   <div class="modal-footer">
     <%= form.button :submit, 'Save', class: "btn btn-episode btn-#{measurement.type}" %>
