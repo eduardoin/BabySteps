@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(user)
-    user.kids.empty? ? new_kid_path : tracking_kid_path(last_active_kid)
+    user.kids.empty? ? new_kid_path : tracking_kid_path(current_user.kids.first)
   end
 
   private
