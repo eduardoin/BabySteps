@@ -1,3 +1,6 @@
+<% if @kid %>
+  <%= render 'components/share_modal' %>
+<% end %>
 <div class="container p-0">
   <div class="navbar navbar-expand-md navbar-light navbar-lewagon">
     <div class="navbar-content">
@@ -32,6 +35,3 @@
     </div>
   </div>
 </div>
-<% if @kid %>
-  <%= render 'components/share_modal' %>
-<% end %>
