@@ -1,5 +1,6 @@
 class KidsController < ApplicationController
   before_action :set_kid, only: %i[show edit update destroy tracking full_log chart]
+  skip_before_action :authenticate_user!, only: [:share]
 
   def index
     @kids = policy_scope(Kid)
@@ -57,6 +58,12 @@ class KidsController < ApplicationController
   def chart
     @heights = @kid.measurements.where(type: 'Height')
     @weights = @kid.measurements.where(type: 'Weight')
+  end
+
+  def share
+    @kid = Kid.find_by(token: params[:token])
+    @episodes = @kid.episodes
+    authorize @kid
   end
 
   private

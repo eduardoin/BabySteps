@@ -9,8 +9,15 @@ class Kid < ApplicationRecord
 
   validates :name, :gender, :born_at, presence: true
   validates :gender, inclusion: { in: GENDERS }
+  validates :token, presence: true
+  validates :token, uniqueness: true
 
   after_create :set_admin_on_create
+  before_validation :generate_token, on: :create
+
+  def generate_token
+    self.token = SecureRandom.urlsafe_base64(64, false)
+  end
 
   private
 
