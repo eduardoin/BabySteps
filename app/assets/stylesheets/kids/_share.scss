@@ -1,0 +1,49 @@
+.share-wrapper {
+  background-color: $white;
+  width: 100%;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.share-container {
+  padding: 24px 24px 32px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.share-icon {
+  margin-bottom: 16px;
+}
+.share-icon svg {
+  width: 144px;
+  height: 40px;
+}
+h1.share-topic {
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+.share-page-content {
+  margin: 156px auto 0 auto;
+}
+
+@media (min-width: 992px) {
+  .share-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 15px 32px 15px;
+  }
+  .share-icon {
+    margin-bottom: 0;
+  }
+  .share-icon svg {
+    width: 176px;
+    height: 48px;
+  }
+  h1.share-topic {
+    font-size: 28px;
+    letter-spacing: -0.035em;
+  }
+}
