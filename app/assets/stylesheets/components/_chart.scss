@@ -18,21 +18,23 @@
 }
 //HEIGHT BUTTON
 .btn-height{
-  color: $dark-main;
+  color: $white;
   background-color: $dark-height;
 }
 .btn-height:hover {
   text-decoration: none;
   background-color: $hover-height;
+  color: $white;
 }
 //WEIGHT BUTTON
 .btn-weight{
-  color: $dark-main;
+  color: $white;
   background-color: $dark-weight;
 }
 .btn-weight:hover {
   text-decoration: none;
   background-color: $hover-weight;
+  color: $white;
 }
 
 .btn-chart {
