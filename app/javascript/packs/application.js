@@ -1,5 +1,5 @@
 import "bootstrap";
-
+import flatpickr from  'flatpickr';
 import swal from 'sweetalert';
 import { initDrawer } from '../components/drawer'
 
@@ -35,4 +35,10 @@ clipboard.on('success', function(e) {
 clipboard.on('error', function(e) {
   setTooltip(e.trigger, 'Failed!');
   setTimeout(_ => hideTooltip(e.trigger), 1000)
+});
+
+
+
+$('.flatpickr-input').flatpickr({
+  enableTime: true
 });

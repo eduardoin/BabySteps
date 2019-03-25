@@ -1,6 +1,6 @@
 <%= simple_form_for [kid, measurement], remote: true, url: kid_measurements_path(kid), as: 'measurement' do |form| %>
   <div class="modal-body modal-#{measurement.type}">
-    <%= form.input :measured_at, label: false, html5: true, input_html: { value: (Time.now - 3.hours).strftime("%Y-%m-%dT%H:%M") } %>
+    <%= form.input :measured_at, label: false, html5: true, input_html: { value: (Time.now - 3.hours).strftime("%Y-%m-%dT%H:%M"), class: "flatpickr-input"} %>
     <%= form.input :type, as: :hidden, value: measurement.type %>
     <%= form.input :value, label: "Value #{measurement.measurement_suffix}" %>
   </div>
