@@ -32,4 +32,6 @@
     </div>
   </div>
 </div>
-<%= render 'components/share_modal' %>
+<% if @kid %>
+  <%= render 'components/share_modal' %>
+<% end %>
