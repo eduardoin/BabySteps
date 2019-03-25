@@ -43,11 +43,7 @@ class Episode < ApplicationRecord
   def present_log
     last_key = data.keys.last
     data.map do |key, value|
-      if key == "temperature"
-        list_tag { "#{value} °C#{',' unless last_key == key}" }
-      else
-        list_tag { "#{value}#{',' unless last_key == key}" }
-      end
+      list_tag { "#{value}#{',' unless last_key == key}" }
     end.join.html_safe
   end
 
