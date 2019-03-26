@@ -1,50 +1,109 @@
-.chart {
-  margin-top: 210px;
+.chart-container {
+    padding: 240px 24px 80px 24px;
 }
-
-.chart-center {
+.chart-height-head, .chart-weight-head {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.height-topic, .weight-topic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.height-badge, .weight-badge {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.height-badge {
+  background-color: $light-height;
+}
+.weight-badge {
+  background-color: $light-weight;
+}
+.height-badge svg {
+  height: 28px;
+}
+.weight-badge svg {
+  height: 24px;
+  margin-bottom: 4px;
+}
+h1.height-title, h1.weight-title {
+  font-size: 32px;
+  font-weight: 100;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+.btn-chart {
+  display: block;
+  font-size: 16px;
   font-weight: 600;
-  border: none;
-  border-radius: 0;
-  margin: auto;
-  padding-right: 58px;
+  padding: 8px 16px;
+  background-color: $white;
 }
-
-.chart-btn-margin {
-  margin-bottom: 34px;
+.btn-chart:hover {
+  text-decoration: none;
 }
-//HEIGHT BUTTON
-.btn-height{
-  color: $white;
-  background-color: $dark-height;
+.btn:focus {
+  box-shadow: none;
+}
+.btn-height {
+  color: $dark-height;
+  border: solid 1px rgba(255,82,93,0.5);
 }
 .btn-height:hover {
-  text-decoration: none;
-  background-color: $hover-height;
-  color: $white;
+  color: $hover-height;
+  border: solid 1px rgba(255,82,93,1);
 }
-//WEIGHT BUTTON
-.btn-weight{
-  color: $white;
-  background-color: $dark-weight;
+.btn-weight {
+  color: $dark-weight;
+  border: solid 1px rgba(115,150,255,0.5);
 }
 .btn-weight:hover {
-  text-decoration: none;
-  background-color: $hover-weight;
-  color: $white;
+  color: $hover-weight;
+  border: solid 1px rgba(115,150,255,1);
 }
-
-.btn-chart {
+.chart {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 140px;
-  height: 46px;
   font-weight: 600;
   border: none;
   border-radius: 0;
   margin: auto;
+}
+.chart-height {
+  margin-bottom: 56px;
+}
+
+@media (min-width: 576px) {
+  .chart-container {
+    padding: 240px 0 80px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .chart-container {
+    padding: 240px 55px 80px 55px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .chart-container {
+    padding: 240px 40px 80px 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .chart-container {
+    padding: 240px 0 80px 0;
+    max-width: 940px;
+  }
 }
