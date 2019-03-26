@@ -4,3 +4,4 @@
 //= require rails-ujs
 //= require_tree .
 //= require flatpickr
+//= require serviceworker-companion
