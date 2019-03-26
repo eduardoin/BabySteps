@@ -10,14 +10,14 @@
             <h1>Add a New Child</h1>
           <% elsif controller_name == "pages" && action_name == "your_profile" %>
             <h1>Your Profile</h1>
-          <% elsif controller_name == "kids" %>
+          <% elsif controller_name == "kids" && action_name == "index"%>
             <h1>Kids List</h1>
           <% elsif controller_name == "pages" && action_name == "about" %>
             <h1>BabySteps Team</h1>
           <% elsif controller_name == "pages" && action_name == "help" %>
             <h1>Help</h1>
           <% elsif @kid ==  nil%>
-        <% elsif @kid.photo.url %>
+          <% elsif @kid.photo.url %>
           <%= cl_image_tag @kid.photo %>
           <% else  %>
             <%= image_tag "babysteps-avatar.svg" %>
