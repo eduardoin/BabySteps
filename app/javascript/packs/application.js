@@ -42,3 +42,5 @@ clipboard.on('error', function(e) {
 $('.flatpickr-input').flatpickr({
   enableTime: true
 });
+
+$('.alert').delay(2000).fadeOut();
