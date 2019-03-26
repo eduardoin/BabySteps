@@ -7,7 +7,7 @@
             <div class="modal-string"></div>
             <div class=<%= "modal-#{measurement.type}-badge" %>>
               <div class=<%= "modal-#{measurement.type}-icon"%>>
-                <%= svg_tag "babysteps-#{measurement.type}.svg" %>
+                <%= svg_tag "babysteps-#{measurement.type.downcase}.svg" %>
               </div>
             </div>
           </div>
