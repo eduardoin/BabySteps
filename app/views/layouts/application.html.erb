@@ -11,7 +11,8 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
     <%= javascript_include_tag 'application' %>
-  </head>
+    <link rel="manifest" href="/manifest.json" />
+<meta name="apple-mobile-web-app-capable" content="yes"></head>
   <body>
     <% exclude_navbar_from_views = ['sessions', 'passwords', 'registrations'] %>
     <% if exclude_navbar_from_views.include?(controller_name) || controller.action_name == "home" || controller.action_name == "share" %>
