@@ -21,7 +21,7 @@
     <div class="user-link-box <%= is_your_profile %>">
       <%= link_to "Your Profile",  pages_your_profile_path, class: "sidebar_actions_link" %>
     </div>
-    <% is_child_list = (request.original_url.include?("kids") && !request.original_url.include?("kids/new") && !request.original_url.include?("tracking") && !request.original_url.include?("full_log") && !request.original_url.include?("chart") && !request.original_url.include?("share")) ? "active" : "" %>
+    <% is_child_list = (request.original_url.include?("kids") && !request.original_url.include?("kids/new") && !request.original_url.include?("tracking") && !request.original_url.include?("full_log") && !request.original_url.include?("chart") && !request.original_url.include?("share") && !request.original_url.include?("edit")) ? "active" : "" %>
     <div class="user-link-box <%= is_child_list %>">
       <%= link_to "Your Child’s List",  kids_path, class: "sidebar_actions_link" %>
     </div>
