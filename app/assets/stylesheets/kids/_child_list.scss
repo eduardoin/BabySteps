@@ -31,3 +31,31 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+.avatar-large {
+  width: 56px;
+  border-radius: 50%;
+}
+
+@media (min-width: 576px) {
+  .card-product-infos {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+  }
+  .center-flex {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.btn-danger {
+    margin-left: 24px;
+}
+
+.buttons-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
