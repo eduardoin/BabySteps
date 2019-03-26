@@ -13,8 +13,8 @@ const initDrawer = () => {
     shader.classList.remove('active')
   }
 
-  button.addEventListener('click', toggleDrawer)
-  shader.addEventListener('click', deactivateDrawer)
+  if (button) button.addEventListener('click', toggleDrawer)
+  if (shader) shader.addEventListener('click', deactivateDrawer)
 }
 
 export { initDrawer };

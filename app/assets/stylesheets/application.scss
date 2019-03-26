@@ -17,6 +17,7 @@
 @import "kids/full_log";
 @import "kids/new";
 @import "kids/child_list";
+@import "kids/share";
 
 @import "components/episode_card";
 
@@ -41,5 +42,7 @@ h1 {
   font-weight: 400;
   letter-spacing: -0.035em;
 }
-
+.form-control[readonly] {
+  background-color: $white !important;
+}
 

@@ -1,10 +1,21 @@
+<div class="wrapper share-wrapper">
+  <div class="container share-container">
+    <div class="share-icon">
+      <%= link_to svg_tag("babysteps-logo.svg"), root_path %>
+    </div>
+    <div class="share-title">
+      <h1 class="share-topic"><strong><%= @kid.name %></strong> Tracking History</h1>
+    </div>
+  </div>
+</div>
+
 <% if @episodes == [] %>
-  <div class="container">
+  <div class="container share-page-content">
     <h1>Your <%= @kid.name %> does not have any episode</h1>
   </div>
 <% else %>
   <div class="container">
-    <div class="row full-log-page">
+    <div class="row share-page-content full-log-page">
       <div class="col-xs-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
       <ul class="list-unstyled log_card-list">
         <% @episodes.each do |episode| %>

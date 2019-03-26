@@ -29,7 +29,7 @@
       <% if @kid && @kid.persisted? %>
         <div class="kid-menu">
           <%= link_to 'tracking', tracking_kid_path(@kid.id), class: current_class?(tracking_kid_path(@kid.id)) %>
-          <%= link_to 'full log', full_log_kid_path(@kid.id), class: current_class?(full_log_kid_path(@kid.id)) %>
+          <%= link_to 'history', full_log_kid_path(@kid.id), class: current_class?(full_log_kid_path(@kid.id)) %>
           <%= link_to 'chart', chart_kid_path(@kid.id), class: current_class?(chart_kid_path(@kid.id)) %>
           <a class="kid-menu-item" href="#" data-toggle="modal" data-target="#shareModal">Share</a>
         </div>

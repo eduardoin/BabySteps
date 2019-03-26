@@ -1,19 +1,37 @@
 <%= render 'measurements/modal', kid: @kid, measurement: Height.new %>
 <%= render 'measurements/modal', kid: @kid, measurement: Weight.new %>
 
-<div class="container">
-  <div class="chart">
-    <div class="chart-center">
-      <%= area_chart [ { data: @heights.map{|height| [height.measured_at, height.value] } } ], xtitle: "Time", ytitle: "Height (cm)", colors: ["#FF525D", "#666"], messages: {empty: "Add some data to see your kid development"}, stacked: false, legend: false %>
+<div class="container chart-container">
+
+  <div class="chart-height-head">
+    <div class="height-topic">
+      <div class="height-badge">
+        <%= svg_tag "babysteps-height.svg" %>
+      </div>
+      <h1 class="height-title">Height</h1>
     </div>
-    <div class="chart-btn-margin">
+    <div class="height-btn-box">
       <%= link_to 'Add new height', '#', data: { target: "#modalHeight", toggle: 'modal' }, class: 'btn btn-chart btn-height' %>
     </div>
-    <div class="chart-center">
-      <%= area_chart [ { data: @weights.map{|weight| [weight.measured_at, weight.value] } } ], xtitle: "Time", ytitle: "Weight (kg)", colors: ["#7396FF", "#666"], messages: {empty: "Add some data to see your kid development"}, stacked: false, legend: false %>
+  </div>
+
+  <div class="chart chart-height">
+    <%= line_chart [ { data: @heights.map{|height| [height.measured_at, height.value] } } ], xtitle: "Time", ytitle: "Height (cm)", colors: ["#FF525D", "#666"], messages: {empty: "Add some data to see your kid development"}, stacked: false, legend: false %>
+  </div>
+
+  <div class="chart-weight-head">
+    <div class="weight-topic">
+      <div class="weight-badge">
+        <%= svg_tag "babysteps-weight.svg" %>
+      </div>
+      <h1 class="weight-title">Weight</h1>
     </div>
-    <div class="chart-btn-margin">
+    <div class="weight-btn-box">
       <%= link_to 'Add new weight', '#', data: { target: "#modalWeight", toggle: 'modal' }, class: 'btn btn-chart btn-weight' %>
     </div>
+  </div>
+
+  <div class="chart chart-weight">
+    <%= line_chart [ { data: @weights.map{|weight| [weight.measured_at, weight.value] } } ], xtitle: "Time", ytitle: "Weight (kg)", colors: ["#7396FF", "#666"], messages: {empty: "Add some data to see your kid development"}, stacked: false, legend: false %>
   </div>
 </div>

@@ -21,6 +21,7 @@ gem 'pundit'
 gem 'flatpickr', '~> 4.5', '>= 4.5.2.0'
 gem "chartkick"
 gem 'clipboard-rails'
+gem 'serviceworker-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
