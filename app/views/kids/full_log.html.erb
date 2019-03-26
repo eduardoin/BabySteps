@@ -25,7 +25,9 @@
                     <ul class="list-inline">
                       <%= episode.present_log %>
                     </ul>
-                  <p class="log_card-subtitle"><%= episode.note.capitalize %></p>
+                    <% if episode.note %>
+                      <p class="log_card-subtitle"><%= episode.note.capitalize %></p>
+                    <% end %>
                 </div>
               </div>
               <div class="btn-group dropleft">
