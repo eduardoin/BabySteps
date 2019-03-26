@@ -5,8 +5,7 @@ user.save!
 
 kid1 = Kid.new(name: 'Lyalya', gender: 'Female', born_at: Time.new(2018-01-1))
 kid1.users << user
-url = 'https://www.teach-through-love.com/images/temper-tantrum-toddler.jpg'
-kid1.remote_photo_url = url
+kid1.photo = File.open('app/assets/images/toddler.jpg')
 kid1.save!
 
 measurement = Measurement.new(kid: kid1, type: "Height", value: 49.0, kid_id: 25, measured_at: Time.new("2018-12-01 16:00:00"))
@@ -110,8 +109,7 @@ kid1.episodes << episode
 
 kid2 = Kid.new(name: 'Lea', gender: 'Female', born_at: Time.new(2016-02-21))
 kid2.users << user
-url = 'https://www.workingmother.com/sites/workingmother.com/files/styles/1000_1x_/public/images/2018/01/little_girl_upset.jpg?itok=MA_VQkuO&fc=45,35'
-kid2.remote_photo_url = url
+kid2.photo = File.open('app/assets/images/girl.jpg')
 kid2.save!
 
 measurement = Measurement.new(kid: kid2, type: "Height", value: 100.0, kid_id: 25, measured_at: Time.new("2018-12-01 16:00:00"))
