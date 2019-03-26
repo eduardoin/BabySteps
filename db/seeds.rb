@@ -114,6 +114,55 @@ url = 'https://www.workingmother.com/sites/workingmother.com/files/styles/1000_1
 kid2.remote_photo_url = url
 kid2.save!
 
+measurement = Measurement.new(kid: kid2, type: "Height", value: 100.0, kid_id: 25, measured_at: Time.new("2018-12-01 16:00:00"))
+kid2.measurements << measurement
+measurement.save!
+
+
+measurement = Measurement.new(kid: kid2, type: "Height", value: 110.0, kid_id: 25, measured_at: Time.new("2019-01-01 12:00:00"))
+kid2.measurements << measurement
+measurement.save!
+
+measurement = Measurement.new(kid: kid2, type: "Height", value: 115.0, kid_id: 25, measured_at: Time.new("2019-02-29 15:00:00"))
+kid2.measurements << measurement
+measurement.save!
+
+measurement = Measurement.new(kid: kid2, type: "Height", value: 121.0, kid_id: 25, measured_at: Time.new("2019-04-07 14:40:00"))
+kid2.measurements << measurement
+measurement.save!
+
+measurement = Measurement.new(kid: kid2, type: "Height", value: 125.0, kid_id: 25, measured_at: Time.new("2019-05-30 12:00:00"))
+kid2.measurements << measurement
+measurement.save!
+
+measurement = Measurement.new(kid: kid2, type: "Height", value: 130.0, kid_id: 25, measured_at: Time.new("2019-07-30 15:00:00"))
+kid2.measurements << measurement
+measurement.save!
+
+measurement = Measurement.new(kid: kid2, type: "Weight", value: 20.2, kid_id: 25, measured_at: Time.new("2018-12-01 16:00:00"))
+kid2.measurements << measurement
+measurement.save!
+
+measurement = Measurement.new(kid: kid2, type: "Weight", value: 23.3, kid_id: 25, measured_at: Time.new("2019-01-01 12:00:00"))
+kid2.measurements << measurement
+measurement.save!
+
+measurement = Measurement.new(kid: kid2, type: "Weight", value: 24.1, kid_id: 25, measured_at: Time.new("2019-02-29 15:00:00"))
+kid2.measurements << measurement
+measurement.save!
+
+measurement = Measurement.new(kid: kid2, type: "Weight", value: 28.6, kid_id: 25, measured_at: Time.new("2019-04-07 14:40:00"))
+kid2.measurements << measurement
+measurement.save!
+
+measurement = Measurement.new(kid: kid2, type: "Weight", value: 30.7, kid_id: 25, measured_at: Time.new("2019-05-30 12:00:00"))
+kid2.measurements << measurement
+measurement.save!
+
+measurement = Measurement.new(kid: kid2, type: "Weight", value: 40.0, kid_id: 25, measured_at: Time.new("2019-07-30 15:00:00"))
+kid2.measurements << measurement
+measurement.save!
+
 episode = Episode.new(kid: kid2, type: "Medication",  data: {"name"=>"cough syrup", "amount"=>"1tbs"}, note:  "5 times per day", tracked_at: Time.new(2019-03-25))
 episode.save!
 kid2.episodes << episode
