@@ -10,7 +10,7 @@
             <h1>Add a New Child</h1>
           <% elsif controller_name == "pages" && action_name == "your_profile" %>
             <h1>Your Profile</h1>
-          <% elsif controller_name == "kids" %>
+          <% elsif controller_name == "kids" && !request.original_url.include?("kids/new") && !request.original_url.include?("tracking") && !request.original_url.include?("full_log") && !request.original_url.include?("chart") && !request.original_url.include?("share") && !request.original_url.include?("edit") %>
             <h1>Kids List</h1>
           <% elsif controller_name == "pages" && action_name == "about" %>
             <h1>BabySteps Team</h1>
