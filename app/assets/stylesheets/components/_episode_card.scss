@@ -194,6 +194,11 @@
 
 
 //GENERAL
+.episode-card:hover {
+  .episode-card-subtitle {
+    color: $dawn-main;
+  }
+}
 .episode-card-text {
   display: flex;
   flex-direction: column;
