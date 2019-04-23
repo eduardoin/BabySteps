@@ -1,8 +1,18 @@
 .episodes-panel-profile {
-  margin: 240px 9px 0 9px;
+  margin: 240px 9px 80px 9px;
 }
 .episodes-list-profile {
   margin: 0;
+}
+.profile-data {
+  margin-bottom: 40px;
+}
+.profile-text {
+  letter-spacing: -0.025em;
+}
+.profile-text em {
+  font-style: normal;
+  color: $medium-main;
 }
 
 @media (min-width: 768px) {

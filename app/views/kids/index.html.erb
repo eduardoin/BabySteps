@@ -1,28 +1,30 @@
 <% if @kids == [] %>
   <%= link_to 'Add a new kid', new_kid_path, class: 'btn btn-primary' %>
 <% else %>
-    <div class="row episodes-panel">
-      <div class="col-12 episodes-list">
-              <h3>Caregiver: <%= current_user.username %></h3>
-              <% @kids.each do |kid| %>
-              <div class="card-product">
-                <% if kid.photo.url %>
-                  <%= cl_image_tag kid.photo, class: "avatar-large", alt: "avatar" %>
-                <% else %>
-                  <%= image_tag "babysteps-avatar.svg", class: "avatar-large", alt: "avatar" %>
+    <div class="row episodes-panel-profile">
+      <div class="col-12 episodes-list-profile">
+              <h4 class="kids-list-title">Caregiver: <em><%= current_user.username %></em></h4>
+              <div class="kids-list">
+                <% @kids.each do |kid| %>
+                <div class="card-kid">
+                  <% if kid.photo.url %>
+                    <%= cl_image_tag kid.photo, class: "avatar-large", alt: "avatar" %>
+                  <% else %>
+                    <%= image_tag "babysteps-avatar.svg", class: "avatar-large", alt: "avatar" %>
+                  <% end %>
+                  <div class="card-kid-infos">
+                    <div class="center-flex">
+                    <h2 class="kids-list-name">Name: <%= link_to kid.name, tracking_kid_path(kid) %></h2>
+                  </div>
+                  <div class="buttons-div">
+                    <%= link_to 'update', edit_kid_path(kid), class: 'homenav-btn signup-btn' %>
+                    <%= link_to 'delete', kid_path(kid), class: 'del-kid-btn', method: :delete, data: { confirm: 'Are you sure?' } %>
+                  </div>
+                  </div>
+                </div>
                 <% end %>
-                <div class="card-product-infos">
-                  <div class="center-flex">
-                  <h2>Name: <%= link_to kid.name, tracking_kid_path(kid) %></h2>
-                </div>
-                <div class="buttons-div">
-                  <p><%= link_to 'update', edit_kid_path(kid), class: 'btn btn-success-update' %></p>
-                  <p><%= link_to 'delete', kid_path(kid), class: 'btn btn-danger-delete', method: :delete, data: { confirm: 'Are you sure?' } %></p>
-                </div>
-                </div>
               </div>
-              <% end %>
-              <%= link_to 'Add a new kid', new_kid_path, class: 'btn btn-primary' %>
+              <%= link_to 'Add a new child', new_kid_path, class: 'btn list-new-kid-btn' %>
           </div>
       </div>
 <% end %>

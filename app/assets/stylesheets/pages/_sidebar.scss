@@ -125,6 +125,7 @@ a.sidebar_kids_link.active,
   display: block;
   z-index: 12;
   transition: right ease-out 0.35s;
+  height: 100%;
 
   &.active {
     right: 0;

@@ -1,4 +1,18 @@
-.card-product {
+.kids-list-title {
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+}
+.kids-list-title em {
+  font-style: normal;
+  color: $medium-main;
+}
+.kids-list {
+  margin-bottom: 32px;
+}
+.kids-list .card-kid:last-child {
+  border-bottom: solid 1px #E9EBEC;
+}
+.card-kid {
   overflow: hidden;
   height: 120px;
   background: white;
@@ -7,38 +21,59 @@
   align-items: center;
   border-top: solid 1px $line-main;
 }
-
-.card-product img {
-  height: 48px;
-  width: 48px;
+.card-kid img {
+  height: 64px;
+  width: 64px;
   object-fit: cover;
 }
-
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+.card-kid h2 {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
 }
-
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+.card-kid h2 a {
+  color: $hover-main;
 }
-
-.card-product .card-product-infos {
+.card-kid .card-kid-infos {
   padding: 16px;
 }
-
 .avatar-large {
   width: 56px;
   border-radius: 50%;
 }
+.buttons-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.del-kid-btn {
+  color: $dark-height;
+  line-height: 1;
+  font-size: 16px;
+  padding: 6px 12px 9px 12px;
+  border: solid 1px rgba(255, 82, 93, 0.5);
+  border-radius: 4px;
+  margin-left: 16px;
+}
+.del-kid-btn:hover {
+  color: #DD020D;
+  text-decoration: none;
+  border: solid 1px $dark-height;
+}
+.list-new-kid-btn {
+  color: $white;
+  background-color: $dark-main;
+}
+.list-new-kid-btn:hover {
+  color: $white;
+  background-color: $hover-main;
+}
 
 @media (min-width: 576px) {
-  .card-product-infos {
+  .card-kid .card-kid-infos {
+    padding-right: 0;
+  }
+  .card-kid-infos {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -48,36 +83,20 @@
     display: flex;
     align-items: center;
   }
+  .card-kid h2 {
+    margin: 0;
+  }
 }
 
-
-
-.buttons-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.btn-danger {
+@media (min-width: 768px) {
+  .card-kid img {
+    height: 80px;
+    width: 80px;
+  }
+  .card-kid .card-kid-infos {
+    padding-left: 24px;
+  }
+  .del-kid-btn {
     margin-left: 24px;
+  }
 }
-
-.btn-danger-delete {
-  color: $dark-height;
-  border: solid 1px rgba(255,82,93,0.5);
-  margin-left: 24px;
-}
-.btn-danger-delete:hover {
-  color: $hover-height;
-  border: solid 1px rgba(255,82,93,0.5);
-}
-
-.btn-success-update {
-  color: $dark-weight;
-  border: solid 1px rgba(115,150,255,0.5);
-}
-.btn-success-update:hover {
-  color: $hover-weight;
-  border: solid 1px rgba(115,150,255,1);
-}
-

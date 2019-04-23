@@ -1,7 +1,9 @@
 <div class="row episodes-panel-profile">
   <div class="col-12 episodes-list-profile">
-    <h4>Username: <%= @user.username %></h4>
-    <h4>Email: <%= @user.email %></h4>
-    <%= link_to "Edit",  edit_user_registration_path, class: "btn btn-flat" %>
+    <div class="profile-data">
+      <h4 class="profile-text">Username: <em><%= @user.username %></em></h4>
+      <h4 class="profile-text">Email: <em><%= @user.email %></em></h4>
+    </div>
+    <%= link_to "Edit",  edit_user_registration_path, class: "homenav-btn signup-btn" %>
   </div>
 </div>

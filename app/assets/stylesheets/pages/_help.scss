@@ -1,0 +1,44 @@
+.help-text, .help-links {
+  font-size: 1.15em;
+  letter-spacing: -0.015em;
+  color: $medium-main;
+}
+.help-text a {
+  color: $dark-main;
+}
+.help-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+.help-links a {
+  color: $dark-main;
+  padding: 8px 8px 8px 0;
+  width: fit-content;
+  margin-bottom: 4px;
+}
+.help-links a:hover {
+  color: $hover-main;
+  text-decoration: none;
+}
+.help-link-item i {
+  width: 20px;
+  text-align: center;
+  margin-right: 8px;
+  position: relative;
+  top: 1px;
+}
+
+@media (min-width: 768px) {
+  .help-text, .help-links {
+    font-size: 1.25em;
+    letter-spacing: -0.02em;
+  }
+  .help-links a {
+    margin-bottom: 6px;
+  }
+  .help-link-item i {
+    width: 22px;
+    margin-right: 12px;
+  }
+}

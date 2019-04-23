@@ -1,12 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+      <div class="session-card">
+        <div class="session-logo">
+          <%= svg_tag "babysteps-logo.svg" %>
+        </div>
+        <div class="session-content">
+          <h1 class="session-title">Edit <%= resource_name.to_s.humanize %></h1 class="session-title">
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
 
-        <div class="form-inputs">
+            <div class="form-inputs">
           <%= f.input :email, required: true, autofocus: true %>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -26,16 +30,17 @@
                       input_html: { autocomplete: "current-password" } %>
         </div>
 
-        <div class="form-actions">
-          <%= f.button :submit, "Update" %>
+            <div class="form-actions session-btn">
+              <%= f.button :submit, "Update" %>
+            </div>
+            <div class="session-options">
+              <p class="option-label">Unhappy?</p>
+              <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+              <p><%= link_to "Back", :back %></p>
+            </div>
+          <% end %>
         </div>
-      <% end %>
-
-      <h3>Cancel my account</h3>
-
-      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-      <%= link_to "Back", :back %>
+      </div>
     </div>
   </div>
 </div>
