@@ -14,7 +14,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 .modal-height {
-  height: 80%;
+  height: calc(100vh - 169px);
 }
 .simple_form {
   height: 100%;
@@ -391,6 +391,9 @@ input::placeholder, textarea::placeholder {
 }
 
 @media (min-width: 768px) {
+  .modal-height {
+    height: auto;
+  }
   .modal-footer {
     position: inherit;
     bottom: none;

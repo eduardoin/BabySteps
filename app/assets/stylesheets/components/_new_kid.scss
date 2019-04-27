@@ -1,5 +1,5 @@
 .new-kid-margin{
-  margin-top: 120px;
+  margin-top: 216px;
 }
 
 .new-kid-content {
@@ -60,6 +60,9 @@
 }
 
 @media (min-width: 576px) {
+  .new-kid-margin {
+    margin-top: 184px;
+  }
   .new-kid-card {
     margin: 56px 10% 40px 10%;
     padding: 0 !important;
@@ -91,5 +94,11 @@
   }
   .new-kid-btn .btn:hover {
     background-color: $hover-main;
+  }
+}
+
+@media (min-width: 992px) {
+  .new-kid-margin {
+    margin-top: 148px;
   }
 }
